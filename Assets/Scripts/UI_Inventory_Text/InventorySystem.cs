@@ -22,9 +22,9 @@ public class InventorySystem : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if (Input.GetKey(KeyCode.E)){
-			EquipInventoryItem (itemSpawnSpot, itemToEquip);
-		}
+//		if (Input.GetKey(KeyCode.E)){
+//			EquipInventoryItem (itemSpawnSpot, itemToEquip);
+//		}
 
 	}
 
