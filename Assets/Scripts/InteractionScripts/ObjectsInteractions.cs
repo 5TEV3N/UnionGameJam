@@ -9,15 +9,17 @@ public class ObjectsInteractions
     public GameObject objectInstance;
     public Transform objectPosition;
 
+    private BasicItem gameItem = new BasicItem();
 
     //public void HighlightOnHover(){}   <--- Supposedly Ryon has the script that relates to these
 
-    public void AddObjectToInventory(string name , int value, GameObject instance)
+    public void AddObjectToInventory(string p_name , int p_value, float p_weight)
     {
         // Place object into your inventory
-        objectName = name;
-        objectValue = value;
-        objectInstance = instance;
+        gameItem.itemName = p_name;
+        gameItem.identityNumber = p_value;
+        gameItem.itemWeight = p_weight;
+
     }
 
     public void HoldObject(GameObject instance, Transform position)
@@ -31,7 +33,7 @@ public class ObjectsInteractions
         if (objectHeld == true)
         {
             /*
-            if (key is pressed)
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 LeaveObject();
             }
