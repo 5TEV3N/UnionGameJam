@@ -20,7 +20,7 @@ public class Spawner {
 			newObjectToSpawn.transform.position = objectSpawnLocations [Random.Range (0, objectSpawnLocations.Length)].position;
 		}
 	}
-	public void SpawnObjectAtSpot(Transform objectSpawnPlace, Transform[] objectSpawnLocations, GameObject objectToSpawn){
+	public void SpawnObjectAtSpot(Transform objectSpawnPlace, GameObject objectToSpawn){
 		GameObject newObjectToSpawn = GameObject.Instantiate (objectToSpawn);
 		newObjectToSpawn.transform.position = objectSpawnPlace.position;
 	}
