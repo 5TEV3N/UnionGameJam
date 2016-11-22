@@ -4,31 +4,33 @@ using System.Collections.Generic;
 public class Audio
 {
     public List<AudioSource> gameAudioList = new List<AudioSource>();
+    public AudioSource gameAudio;
     public float audioVolume = 0.5f;
     public float audioFadeValue = 0;
 
-    public void GetAudio(AudioSource audio)
+    public void GetAudio(AudioSource p_audio)
     {
-        // put audio into list
+        gameAudio = p_audio;
+        gameAudioList.Add(gameAudio);
     }
 
     public void PlayAudio()
     {
-        // audio.Play();
+        // gameAudioList.Play();
     }
 
     public void FadeAudio()
     {
-        // Mathf.Lerp (audio, audioFadeValue, time.deltaTime);
+        // Mathf.Lerp (gameAudioList, audioFadeValue, time.deltaTime);
     }
 
     public void StopAudio()
     {
-        //  audio.Stop();
+        //  gameAudioList.Stop();
     }
 
     public void MuteAudio()
     {
-        //  audio.Mute = true;
+        //  gameAudioList.Mute = true;
     }
 }
