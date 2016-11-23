@@ -48,12 +48,15 @@ public class BasicStateEngine {
 		stateIterationCount++;
 
 	}
-	public void AddStateToList(string stateID,BasicState stateToAdd){
+	public void AddStateToList(string stateName,BasicState stateToAdd){
 		BasicState temp = null;
-		if (stateFullList.TryGetValue(stateID, out temp)){
-			Debug.Log ("There is already an item with the stateID " + stateID + " as a key");
+		if (stateFullList.TryGetValue(stateName, out temp)){
+			Debug.Log ("There is already an item with the stateID " + stateName + " as a key");
 		}else{
 		}
-		stateFullList.Add (stateID, stateToAdd);
+
+		//Assign key to state;
+		stateToAdd.stateName = stateName;
+		stateFullList.Add (stateName, stateToAdd);
 	}
 }

@@ -8,6 +8,7 @@ public class BasicItem{
 	public float itemWeight;
 	public bool isHeld;
 	public bool isDropped;
+	public Sprite itemIcon;
 	//public 
 
 	public BasicItem(){
