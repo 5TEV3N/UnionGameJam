@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(transform.right * playerSpeed);
+                    rb.AddForce(transform.right * playerSpeed, ForceMode.Impulse);
                 }
             }
 
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(-transform.right * playerSpeed);
+                    rb.AddForce(-transform.right * playerSpeed, ForceMode.Impulse);
                 }
             }
         }
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(transform.forward * playerSpeed);
+                    rb.AddForce(transform.forward * playerSpeed, ForceMode.Impulse);
                 }
             }
 
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(-transform.forward * playerSpeed);
+                    rb.AddForce(-transform.forward * playerSpeed, ForceMode.Impulse);
                 }
             }
         }
