@@ -48,5 +48,20 @@ public class InputManager : MonoBehaviour
                 cameraLock = false;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            //playerController.Sprint();
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            //playerController.Sprint(); <--- Slowdown
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerController.Jump();
+        }
     }
 }

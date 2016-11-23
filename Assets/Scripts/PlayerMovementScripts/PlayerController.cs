@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Values")]
     public float mouseSensitivity = 1;              // Mouse sensitivity
+    public float jumpHeight = 1;                    // How far i can jump
     public float playerSpeed = 1;                   // We can controll the speed of the player here.
     public float upDownRange = 90.0f;               // How far i can look up or down.
     public float valOfVelocity;                     // Checks how fast the player goes
@@ -84,6 +85,15 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Sprint()
+    {
+        //WIP
+    }
+
+    public void Jump()
+    {
 
     }
 }
