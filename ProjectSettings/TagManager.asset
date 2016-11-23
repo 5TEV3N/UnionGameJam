@@ -14,11 +14,11 @@ TagManager:
   - 
   - 
   - PlayerLayer
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Walls
+  - Interactable
+  - Dangerous
+  - Memorry
   - 
   - 
   - 
