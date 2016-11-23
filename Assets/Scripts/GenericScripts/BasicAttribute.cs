@@ -49,10 +49,13 @@ public class BasicAttribute {
 		float ratio = Mathf.Clamp01 (baseAttributeCurrent / baseAttributeMax);
 		return ratio;
 	}
+
+	//Shows value of the health as a percentage of 100
 	public float GetPercentage(){
 		float percentage = GetRatio () * 100f;
 		return percentage;
 	}
+	//Shows value of the health as a relative value of X, this means that if you have 0.75 baseAttributeCurrent and set the float to 500 (meaing 500 is the max health), you will have 375 hp
 	public float GetRatioAsRange(float maxValue){
 		float ratioAsRange = GetRatio() * maxValue;
 		return ratioAsRange;
