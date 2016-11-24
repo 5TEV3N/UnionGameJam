@@ -18,10 +18,13 @@ public class PlayerController : MonoBehaviour
     public Camera cam;                              // Acess the Camera of the gameobject       
 
     private float verticalRotation = 0;             // Contains the MouseYAxis
+    private float originalPlayerSpeed;              // Contains the orginal player speed before they start sprinting
+    private float newMaxVelocity;                   // Contains
 
     void Awake()
     {   
         inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
+        originalPlayerSpeed = playerSpeed;
     }
 
     void Update()
@@ -89,11 +92,17 @@ public class PlayerController : MonoBehaviour
 
     public void Sprint()
     {
-        //WIP
+        playerSpeed = originalPlayerSpeed + 5;
+    }
+
+    public void StopSprinting()
+    {
+        playerSpeed = originalPlayerSpeed;
     }
 
     public void Jump()
     {
-
+        // Raycast here to check if youre grounded or not
+        rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
     }
 }
