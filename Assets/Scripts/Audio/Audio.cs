@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
+
 public class Audio
 {
-    public List<AudioSource> gameAudioList = new List<AudioSource>();
     public AudioSource gameAudio;
     public float audioVolume = 0.5f;
     public float audioFadeValue = 0;
@@ -11,26 +10,36 @@ public class Audio
     public void GetAudio(AudioSource p_audio)
     {
         gameAudio = p_audio;
-        gameAudioList.Add(gameAudio);
+        gameAudio.volume = audioVolume;
     }
 
     public void PlayAudio()
     {
-        // gameAudioList.Play();
+        gameAudio.Play();
     }
 
-    public void FadeAudio()
+    public void FadeOutAudio()
     {
-        // Mathf.Lerp (gameAudioList, audioFadeValue, time.deltaTime);
+        audioVolume = Mathf.Lerp (audioVolume, audioFadeValue, Time.deltaTime);
+    }
+
+    public void FadeInAudio()
+    {
+        audioVolume = Mathf.Lerp(audioFadeValue, audioVolume, Time.deltaTime);
     }
 
     public void StopAudio()
     {
-        //  gameAudioList.Stop();
+        gameAudio.Stop();
     }
 
     public void MuteAudio()
     {
-        //  gameAudioList.Mute = true;
+        gameAudio.mute = true;
+    }
+
+    public void UnMuteAudio()
+    {
+        gameAudio.mute = false;
     }
 }
