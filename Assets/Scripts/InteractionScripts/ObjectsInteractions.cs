@@ -11,6 +11,7 @@ public class ObjectsInteractions
     private Renderer interactableObjRender;
     private GameObject interactableObj;
 
+
     private BasicItem gameItem = new BasicItem();
 
     public void HighlightOnHover(GameObject p_thisGameObject, Renderer p_interactableObjRender, Color p_objOriginalColor)
@@ -33,7 +34,6 @@ public class ObjectsInteractions
         }
     }
 
-
     public void AddObjectToInventory(string p_name , int p_value, float p_weight)
     {
         gameItem.itemName = p_name;
@@ -55,15 +55,17 @@ public class ObjectsInteractions
             {
                 gameItem.isHeld = false;
 
-                LeaveObject(p_instance);
+                LeaveObject(objectInstance, objectPosition);
             }
         }
 
     }
     
-    public void LeaveObject(GameObject p_droppedInstance)
+    public void LeaveObject(GameObject p_droppedInstance, Transform p_doppedPosition)
     {
-        //if holding an object is happening, you may drop that object
+        p_droppedInstance = GameObject.Instantiate(p_droppedInstance, p_doppedPosition) as GameObject;
+        p_droppedInstance.transform.position = p_droppedInstance.transform.position;
+
         gameItem.isDropped = true;
     }
 }
