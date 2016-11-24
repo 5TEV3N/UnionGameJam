@@ -48,13 +48,16 @@ public class InputManager : MonoBehaviour
                 cameraLock = false;
             }
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
         {
             playerController.Sprint();
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (Input.GetKeyUp(KeyCode.R))
         {
             playerController.StopSprinting();
         }
