@@ -49,7 +49,7 @@ public class InputManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             playerController.Sprint();
         }

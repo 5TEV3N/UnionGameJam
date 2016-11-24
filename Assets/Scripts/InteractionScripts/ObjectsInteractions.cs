@@ -68,4 +68,5 @@ public class ObjectsInteractions
 
         gameItem.isDropped = true;
     }
+
 }

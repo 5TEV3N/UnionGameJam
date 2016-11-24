@@ -18,13 +18,12 @@ public class PlayerController : MonoBehaviour
     public Camera cam;                              // Acess the Camera of the gameobject       
 
     private float verticalRotation = 0;             // Contains the MouseYAxis
-    private float originalPlayerSpeed;              // Contains the orginal player speed before they start sprinting
-    private float newMaxVelocity;                   // Contains
+    private float originalMaxVelocity;              // Contains the orginal MaxVelocity
 
     void Awake()
     {   
         inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
-        originalPlayerSpeed = playerSpeed;
+        originalMaxVelocity = maxVelocity;
     }
 
     void Update()
@@ -57,15 +56,15 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(transform.right * playerSpeed, ForceMode.Impulse);
-                }
+                    rb.AddForce(transform.right * playerSpeed);
+                }   
             }
 
             if (xAxis < 0)
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(-transform.right * playerSpeed, ForceMode.Impulse);
+                    rb.AddForce(-transform.right * playerSpeed);
                 }
             }
         }
@@ -76,7 +75,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(transform.forward * playerSpeed, ForceMode.Impulse);
+                    rb.AddForce(transform.forward * playerSpeed);
                 }
             }
 
@@ -84,7 +83,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(-transform.forward * playerSpeed, ForceMode.Impulse);
+                    rb.AddForce(-transform.forward * playerSpeed);
                 }
             }
         }
@@ -92,12 +91,12 @@ public class PlayerController : MonoBehaviour
 
     public void Sprint()
     {
-        playerSpeed = originalPlayerSpeed + 5;
+        maxVelocity = originalMaxVelocity + 2;
     }
 
     public void StopSprinting()
     {
-        playerSpeed = originalPlayerSpeed;
+        maxVelocity = originalMaxVelocity;
     }
 
     public void Jump()
