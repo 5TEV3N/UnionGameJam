@@ -3,11 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BasicNarrativeText{
-
-	public string keyName;
+	//Dictionary key and values 
+	public string keyName; 
 	public string keyValue;
+	//List of tags associated with this system
 	public List<BasicTag> associatedTags;
+	//Weight of this narrative compontent that can be used to pick text
 	public float narrativeWeight;
+
+	//narrative layers are used to be able to differentiate the different types of texts we want to store, we will have a "database" for the overall compilation.
+	public int narrativeLayer;
+	// layer 0 = flavour
+	// layer 1 = Environmental Barks
+	// layer 2 = Generic Hello
+	// layer 3 = Generic Goodbye
+	// layer 4 = Generic signs
+	// layer 5 = Win Messages
+	// layer 6 = Lose Messages
+	// layer 7 = System Alerts
+	// layer 8 = Menu texts
+	// layer 9 = DO NOT GO HERE
+	// layer 10-100 objective-specific step layers
+
 
 	public BasicNarrativeText(){
 	}
@@ -31,6 +48,12 @@ public class BasicNarrativeText{
 	}
 	public bool CheckIfTagIsInList (BasicTag tagToCheck){
 		return associatedTags.Contains (tagToCheck);
+	}
+	public int GetNarrativeLayer(){
+		return narrativeLayer;
+	}
+	public void SetNarrativeLayer(int layerToSet){
+		narrativeLayer = layerToSet;
 	}
 
 }
