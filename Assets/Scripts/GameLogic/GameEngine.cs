@@ -5,7 +5,7 @@ public class GameEngine : MonoBehaviour {
 
 	public BasicObjectiveEngine objectiveEngine;
 	public BasicStateEngine stateEngine;
-	public 
+	//public 
 
 	// Use this for initialization
 	void Start () {
