@@ -25,7 +25,7 @@ public class Audio
 
     public void FadeInAudio()
     {
-        audioVolume = Mathf.Lerp(audioFadeValue, audioVolume, Time.deltaTime);
+        audioVolume = Mathf.Lerp (audioFadeValue, audioVolume, Time.deltaTime);
     }
 
     public void StopAudio()
