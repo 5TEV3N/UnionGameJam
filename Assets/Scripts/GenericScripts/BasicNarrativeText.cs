@@ -7,22 +7,29 @@ public class BasicNarrativeText{
 	public string keyName;
 	public string keyValue;
 	public List<BasicTag> associatedTags;
+	public float narrativeWeight;
 
-	BasicNarrativeText(){
+	public BasicNarrativeText(){
 	}
-	void SetNarrativeValue(string valueToSet){
+	public void SetNarrativeValue(string valueToSet){
 		keyValue = valueToSet;
 	}
-	void SetKeyName(string keyToSet){
+	public void SetKeyName(string keyToSet){
 		keyName = keyToSet;
 	}
-	void AddTagToList(BasicTag tagToSet){
+	public void SetNarrativeWeight(float weightToAssign){
+		narrativeWeight = weightToAssign;
+	}
+	public float GetNarrativeWeight(){
+		return narrativeWeight;
+	}
+	public void AddTagToList(BasicTag tagToSet){
 		associatedTags.Add (tagToSet);
 	}
-	List<BasicTag> GetAssociatedTags(){
+	public List<BasicTag> GetAssociatedTags(){
 		return associatedTags;
 	}
-	bool CheckIfTagIsInList (BasicTag tagToCheck){
+	public bool CheckIfTagIsInList (BasicTag tagToCheck){
 		return associatedTags.Contains (tagToCheck);
 	}
 
