@@ -4,39 +4,44 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     InputManager inputManager;
+    private BasicAttribute jumpHeight = new BasicAttribute();
+    private BasicAttribute playerSpeed = new BasicAttribute();
 
     [Header("Values")]
-    public float mouseSensitivity = 1;              // Mouse sensitivity
-    public float jumpHeight = 1;                    // How far i can jump
-    public float playerSpeed = 1;                   // We can controll the speed of the player here.
-    public float upDownRange = 90.0f;               // How far i can look up or down.
+    public float mouseSensitivity = 1;                               // Mouse sensitivity
+    public float jumpHeightIntensifier = 1;                          // How far i can jump
+    public float playerSpeedIntensifier = 1;                         // We can controll the speed of the player here.
+    public float upDownRange = 90.0f;                                // How far i can look up or down.
 
-    public float valOfVelocity;                     // Checks how fast the player goes
-    public float maxVelocity;                       // The max speed of how fast the player goes
+    public float valOfVelocity;                                      // Checks how fast the player goes
+    public float maxVelocity;                                        // The max speed of how fast the player goes
 
-    public float camRayDistance;                    // Distance of the ray from the camera. This is to check if you can interact with an object
-    public float floorRayDistance;                  // Distance of the ray from the player. This is to check if you can Jump
+    public float camRayDistance;                                     // Distance of the ray from the camera. This is to check if you can interact with an object
+    public float floorRayDistance;                                   // Distance of the ray from the player. This is to check if you can Jump
 
-    public bool isJumping;                          // Checks if you are grounded or not
+    public bool isJumping;                                           // Checks if you are grounded or not
 
     [Header ("Containers")]
-    public Rigidbody rb;                            // Access the rigidbody to move
-    public Camera cam;                              // Acess the Camera of the gameobject
-    public LayerMask groundMask;                    // Layer mask to check the ground
+    public Rigidbody rb;                                             // Access the rigidbody to move
+    public Camera cam;                                               // Acess the Camera of the gameobject
+    public LayerMask groundMask;                                     // Layer mask to check the ground
 
-    private float verticalRotation = 0;             // Contains the MouseYAxis
-    private float originalMaxVelocity;              // Contains the orginal MaxVelocity
+    private float verticalRotation = 0;                              // Contains the MouseYAxis
+    private float originalMaxVelocity;                               // Contains the orginal MaxVelocity  
 
-    private RaycastHit myHit;                       // Declaring a hit variable, registers a ray hit (gets information on hit)
-    private RaycastHit floorHit;                    // Declaring a hit variable, register a ray hit if it hits the ground 
-    private Ray myRay;                              // Declaring a ray variable, register an actual ray
-    private Ray jumpingRay;                         // Declaring a ray variable, registers an  actual ray that checks if you can jump or not
-    private Vector3 startMarker;                    // Declaring a container for the start position for the ray	
+    private RaycastHit myHit;                                        // Declaring a hit variable, registers a ray hit (gets information on hit)
+    private RaycastHit floorHit;                                     // Declaring a hit variable, register a ray hit if it hits the ground 
+    private Ray myRay;                                               // Declaring a ray variable, register an actual ray
+    private Ray jumpingRay;                                          // Declaring a ray variable, registers an  actual ray that checks if you can jump or not
+    private Vector3 startMarker;                                     // Declaring a container for the start position for the ray	
 
     void Awake()
     {   
         inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
         originalMaxVelocity = maxVelocity;
+
+        jumpHeight.AdjustAttribute("AdjustToNumber", 1f);
+        playerSpeed.AdjustAttribute("AdjustToNumber", 1f);
     }
 
     void Update()
@@ -95,7 +100,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(transform.right * playerSpeed);
+                    rb.AddForce(transform.right * (playerSpeed.baseAttributeCurrent * playerSpeedIntensifier));
                 }   
             }
 
@@ -103,7 +108,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(-transform.right * playerSpeed);
+                    rb.AddForce(-transform.right * (playerSpeed.baseAttributeCurrent * playerSpeedIntensifier));
                 }
             }
         }
@@ -114,7 +119,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(transform.forward * playerSpeed);
+                    rb.AddForce(transform.forward * (playerSpeed.baseAttributeCurrent * playerSpeedIntensifier));
                 }
             }
 
@@ -122,7 +127,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (valOfVelocity <= maxVelocity)
                 {
-                    rb.AddForce(-transform.forward * playerSpeed);
+                    rb.AddForce(-transform.forward * (playerSpeed.baseAttributeCurrent * playerSpeedIntensifier));
                 }
             }
         }
@@ -142,7 +147,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, Vector3.down , floorRayDistance, groundMask))
         {
-            rb.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
+            rb.AddForce(transform.up * (jumpHeight.baseAttributeCurrent * jumpHeightIntensifier), ForceMode.Impulse);
         }
     }
 
