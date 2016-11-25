@@ -104,7 +104,7 @@ GameObject:
   - 33: {fileID: 2144324}
   - 114: {fileID: 2144323}
   - 64: {fileID: 2144322}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -477,7 +477,7 @@ GameObject:
   - 33: {fileID: 4159789}
   - 114: {fileID: 4159788}
   - 64: {fileID: 4159787}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   - 33: {fileID: 27249243}
   - 114: {fileID: 27249242}
   - 64: {fileID: 27249241}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1735,7 +1735,7 @@ GameObject:
   - 33: {fileID: 139742590}
   - 114: {fileID: 139742589}
   - 64: {fileID: 139742588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2236,7 +2236,7 @@ GameObject:
   - 33: {fileID: 236549219}
   - 114: {fileID: 236549218}
   - 64: {fileID: 236549217}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2609,7 +2609,7 @@ GameObject:
   - 33: {fileID: 273856147}
   - 114: {fileID: 273856146}
   - 64: {fileID: 273856145}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3140,7 +3140,7 @@ GameObject:
   - 33: {fileID: 303637560}
   - 114: {fileID: 303637559}
   - 64: {fileID: 303637558}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3897,7 +3897,7 @@ GameObject:
   - 33: {fileID: 385737619}
   - 114: {fileID: 385737618}
   - 64: {fileID: 385737617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4398,7 +4398,7 @@ GameObject:
   - 33: {fileID: 408655212}
   - 114: {fileID: 408655211}
   - 64: {fileID: 408655210}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4874,8 +4874,14 @@ MonoBehaviour:
   upDownRange: 90
   valOfVelocity: 0
   maxVelocity: 5
+  camRayDistance: 2
+  floorRayDistance: 1.9
+  isJumping: 0
   rb: {fileID: 431352862}
   cam: {fileID: 2009473143}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &431352864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4900,7 +4906,7 @@ GameObject:
   - 33: {fileID: 482353224}
   - 114: {fileID: 482353223}
   - 64: {fileID: 482353222}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5401,7 +5407,7 @@ GameObject:
   - 33: {fileID: 576714769}
   - 114: {fileID: 576714768}
   - 64: {fileID: 576714767}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5902,7 +5908,7 @@ GameObject:
   - 33: {fileID: 688445264}
   - 114: {fileID: 688445263}
   - 64: {fileID: 688445262}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6304,7 +6310,7 @@ GameObject:
   - 33: {fileID: 695310342}
   - 114: {fileID: 695310341}
   - 64: {fileID: 695310340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7061,7 +7067,7 @@ GameObject:
   - 33: {fileID: 782645898}
   - 114: {fileID: 782645897}
   - 64: {fileID: 782645896}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7562,7 +7568,7 @@ GameObject:
   - 33: {fileID: 891946643}
   - 114: {fileID: 891946642}
   - 64: {fileID: 891946641}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8063,7 +8069,7 @@ GameObject:
   - 33: {fileID: 897862693}
   - 114: {fileID: 897862692}
   - 64: {fileID: 897862691}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8436,7 +8442,7 @@ GameObject:
   - 33: {fileID: 947024350}
   - 114: {fileID: 947024349}
   - 64: {fileID: 947024348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9625,7 +9631,7 @@ GameObject:
   - 33: {fileID: 1014882007}
   - 114: {fileID: 1014882006}
   - 64: {fileID: 1014882005}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10254,7 +10260,7 @@ GameObject:
   - 33: {fileID: 1103035460}
   - 114: {fileID: 1103035459}
   - 64: {fileID: 1103035458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10755,7 +10761,7 @@ GameObject:
   - 33: {fileID: 1145824512}
   - 114: {fileID: 1145824511}
   - 64: {fileID: 1145824510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11128,7 +11134,7 @@ GameObject:
   - 33: {fileID: 1150178729}
   - 114: {fileID: 1150178728}
   - 64: {fileID: 1150178727}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11629,7 +11635,7 @@ GameObject:
   - 33: {fileID: 1179741316}
   - 114: {fileID: 1179741315}
   - 64: {fileID: 1179741314}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12002,7 +12008,7 @@ GameObject:
   - 33: {fileID: 1183414411}
   - 114: {fileID: 1183414410}
   - 64: {fileID: 1183414409}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12375,7 +12381,7 @@ GameObject:
   - 33: {fileID: 1188034749}
   - 114: {fileID: 1188034748}
   - 64: {fileID: 1188034747}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13004,7 +13010,7 @@ GameObject:
   - 33: {fileID: 1204838971}
   - 114: {fileID: 1204838970}
   - 64: {fileID: 1204838969}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13761,7 +13767,7 @@ GameObject:
   - 33: {fileID: 1306120258}
   - 114: {fileID: 1306120257}
   - 64: {fileID: 1306120256}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14262,7 +14268,7 @@ GameObject:
   - 33: {fileID: 1336823305}
   - 114: {fileID: 1336823304}
   - 64: {fileID: 1336823303}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14635,7 +14641,7 @@ GameObject:
   - 33: {fileID: 1365732073}
   - 114: {fileID: 1365732072}
   - 64: {fileID: 1365732071}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15008,7 +15014,7 @@ GameObject:
   - 33: {fileID: 1380204484}
   - 114: {fileID: 1380204483}
   - 64: {fileID: 1380204482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15509,7 +15515,7 @@ GameObject:
   - 33: {fileID: 1487897120}
   - 114: {fileID: 1487897119}
   - 64: {fileID: 1487897118}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15882,7 +15888,7 @@ GameObject:
   - 33: {fileID: 1500578787}
   - 114: {fileID: 1500578786}
   - 64: {fileID: 1500578785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16383,7 +16389,7 @@ GameObject:
   - 33: {fileID: 1530945271}
   - 114: {fileID: 1530945270}
   - 64: {fileID: 1530945269}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17012,7 +17018,7 @@ GameObject:
   - 33: {fileID: 1577579097}
   - 114: {fileID: 1577579096}
   - 64: {fileID: 1577579095}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17385,7 +17391,7 @@ GameObject:
   - 33: {fileID: 1578371234}
   - 114: {fileID: 1578371233}
   - 64: {fileID: 1578371232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18142,7 +18148,7 @@ GameObject:
   - 33: {fileID: 1637077678}
   - 114: {fileID: 1637077677}
   - 64: {fileID: 1637077676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18515,7 +18521,7 @@ GameObject:
   - 33: {fileID: 1644730815}
   - 114: {fileID: 1644730814}
   - 64: {fileID: 1644730813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19016,7 +19022,7 @@ GameObject:
   - 33: {fileID: 1668803200}
   - 114: {fileID: 1668803199}
   - 64: {fileID: 1668803198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19836,7 +19842,7 @@ GameObject:
   - 33: {fileID: 1829211493}
   - 114: {fileID: 1829211492}
   - 64: {fileID: 1829211491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20209,7 +20215,7 @@ GameObject:
   - 33: {fileID: 1838370026}
   - 114: {fileID: 1838370025}
   - 64: {fileID: 1838370024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20582,7 +20588,7 @@ GameObject:
   - 33: {fileID: 1841677809}
   - 114: {fileID: 1841677808}
   - 64: {fileID: 1841677807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21083,7 +21089,7 @@ GameObject:
   - 33: {fileID: 1861336092}
   - 114: {fileID: 1861336091}
   - 64: {fileID: 1861336090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HorizontalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21584,7 +21590,7 @@ GameObject:
   - 33: {fileID: 1879254761}
   - 114: {fileID: 1879254760}
   - 64: {fileID: 1879254759}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21957,7 +21963,7 @@ GameObject:
   - 33: {fileID: 1951942092}
   - 114: {fileID: 1951942091}
   - 64: {fileID: 1951942090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22330,7 +22336,7 @@ GameObject:
   - 33: {fileID: 1973241699}
   - 114: {fileID: 1973241698}
   - 64: {fileID: 1973241697}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27421,7 +27427,7 @@ GameObject:
   - 33: {fileID: 2015358656}
   - 114: {fileID: 2015358655}
   - 64: {fileID: 2015358654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27794,7 +27800,7 @@ GameObject:
   - 33: {fileID: 2049486915}
   - 114: {fileID: 2049486914}
   - 64: {fileID: 2049486913}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28167,7 +28173,7 @@ GameObject:
   - 33: {fileID: 2093007809}
   - 114: {fileID: 2093007808}
   - 64: {fileID: 2093007807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28540,7 +28546,7 @@ GameObject:
   - 33: {fileID: 2099419821}
   - 114: {fileID: 2099419820}
   - 64: {fileID: 2099419819}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28909,7 +28915,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2100641014}
   - 65: {fileID: 2100641015}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29082,7 +29088,7 @@ GameObject:
   - 33: {fileID: 2118048072}
   - 114: {fileID: 2118048071}
   - 64: {fileID: 2118048070}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VerticalWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
