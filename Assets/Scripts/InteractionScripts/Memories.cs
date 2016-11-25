@@ -1,26 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Memories : MonoBehaviour
 {
-    void Awake()
-    {
+    // Add this script to the Memories Manager in the scene
 
-    }
-    void Start()
-    {
+    public List<GameObject> memoriesThatDerivesFrom = new List<GameObject>();
 
-    }
-    void Update()
-    {
-
-    }
     public void GetMemories()
     {
-
+        // if the player interacts with a story related object that presents a memory, redirect to this function.
     }
+
     public void PlayMemories()
     {
-
+        // instatiate the memory from the list
     }
 }
