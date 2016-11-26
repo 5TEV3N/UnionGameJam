@@ -7,32 +7,33 @@ public class ObjectsInteractions
     public Transform objectPosition;
     public bool isHighlighted;
 
-    private Color orginalColor;
-    private Renderer interactableObjRender;
-    private GameObject interactableObj;
+    public Color orginalColor;
+    public Renderer interactableObjRender;
+    public GameObject interactableObj;
 
 
     private BasicItem gameItem = new BasicItem();
 
-    public void HighlightOnHover(GameObject p_thisGameObject, Renderer p_interactableObjRender, Color p_objOriginalColor)
+    public void HighlightOnHover(GameObject p_thisGameObject, Renderer p_interactableObjRender, Color p_objOriginalColor) //, Renderer p_interactableObjRender, Color p_objOriginalColor
     {
-        orginalColor = p_objOriginalColor;
-        interactableObjRender = p_interactableObjRender;
-        interactableObj = p_thisGameObject;
+       orginalColor = p_objOriginalColor;
+       interactableObjRender = p_interactableObjRender;
+       interactableObj = p_thisGameObject;
+
+       interactableObjRender = interactableObj.GetComponent<Renderer>();
+       orginalColor = interactableObjRender.material.color;
 
         if (isHighlighted == true)
-
         {
-            interactableObjRender = interactableObj.GetComponent<Renderer>();
-            orginalColor = interactableObjRender.material.color;
             interactableObjRender.material.color = orginalColor + new Color32(200, 200, 200, 1);
-
         }
-        else
+
+        if (isHighlighted == false)
         {
             interactableObjRender.material.color = orginalColor;
         }
     }
+
 
     public void AddObjectToInventory(string p_name , int p_value, float p_weight)
     {

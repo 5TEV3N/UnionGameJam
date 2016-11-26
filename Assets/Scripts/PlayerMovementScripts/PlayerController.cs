@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     InputManager inputManager;
     private BasicAttribute jumpHeight = new BasicAttribute();
     private BasicAttribute playerSpeed = new BasicAttribute();
+    private ObjectsInteractions gameObjectHighlight = new ObjectsInteractions();
+    private ObjectsInteractions highlightThis = new ObjectsInteractions();
 
     [Header("Values")]
     public float mouseSensitivity = 1;                               // Mouse sensitivity
@@ -25,6 +27,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;                                             // Access the rigidbody to move
     public Camera cam;                                               // Acess the Camera of the gameobject
     public LayerMask groundMask;                                     // Layer mask to check the ground
+    public LayerMask interactableMask;                               // Layer mask for the player interaction
 
     private float verticalRotation = 0;                              // Contains the MouseYAxis
     private float originalMaxVelocity;                               // Contains the orginal MaxVelocity  
@@ -50,31 +53,23 @@ public class PlayerController : MonoBehaviour
 
         startMarker = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-
         Debug.DrawRay(startMarker, myRay.direction * camRayDistance, Color.magenta);
+
+        if (Physics.Raycast(myRay, out myHit, camRayDistance, interactableMask))
+        {
+            highlightThis.isHighlighted = true;
+            highlightThis.interactableObjRender = myHit.transform.GetComponent<Renderer>();
+            if (highlightThis.isHighlighted == true)
+            {
+                highlightThis.HighlightOnHover(myHit.transform.gameObject, highlightThis.interactableObjRender, highlightThis.interactableObjRender.material.color);
+            }
+        }
+
         Debug.DrawRay(gameObject.transform.position, Vector3.down * floorRayDistance, Color.black);
-
-        jumpingRay = new Ray(gameObject.transform.position, Vector3.down );
         Physics.Raycast(jumpingRay, out floorHit);
+        jumpingRay = new Ray(gameObject.transform.position, Vector3.down);
     }
-    
-    public GameObject CastRay() // Disclamer, I did this 2nd semester
-    {    
-        //Actually Cast the ray on Command --> output collider to myhit ("out" keyword). myhit=  has information from myray and puts it into myHit
-        Physics.Raycast(myRay, out myHit, camRayDistance);   // Casts a ray
-        //Print collider hit, filter null errors
-        if (myHit.collider != null)
-        {
-            //print (myHit.collider.gameObject.GetComponent<C_Tiles>().id); <-- Example of printing something from an object
-            return myHit.collider.gameObject; // gets the actual game object within the scene, scripts and all
-        }
-        else
-        {
-            return null; //returns nothing
-        }
 
-    }
-    
     public void Mouselook(float mouseXAxis, float mouseYAxis)
     {
         //Filter Horizontal input
@@ -152,3 +147,21 @@ public class PlayerController : MonoBehaviour
     }
 
 }
+/*
+public GameObject CastRay() // Disclamer, I did this 2nd semester
+{    
+    //Actually Cast the ray on Command --> output collider to myhit ("out" keyword). myhit=  has information from myray and puts it into myHit
+    Physics.Raycast(myRay, out myHit, camRayDistance);   // Casts a ray
+    //Print collider hit, filter null errors
+    if (myHit.collider != null)
+    {
+        //print (myHit.collider.gameObject.GetComponent<C_Tiles>().id); <-- Example of printing something from an object
+        return myHit.collider.gameObject.GetComponent<HighlightThisObject>().HighlightThisObjectPlease() ; // gets the actual game object within the scene, scripts and all
+    }
+    else
+    {
+        return null; //returns nothing
+    }
+
+}
+*/

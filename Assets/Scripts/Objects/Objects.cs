@@ -15,7 +15,7 @@ public class Objects
 
     }
 
-    public void DestroyGameObject()
+    public void DestroyGameObject(GameObject p_GameObjectInstance)
     {
 
     }
