@@ -9,8 +9,9 @@ public class BasicObjective{
 	public string objectiveMessage;
 	public float timeMarker;
 	public float timeOfOnset;
+	public int objectiveLayer;
+	// use numbers 10-100 for objective steps to match them with corresponding narrative text sets.
 
-	//public 
 
 	public BasicObjective(int p_identityNumber , string p_objectiveName, float timeStart = 0){
 		identityNumber = p_identityNumber;

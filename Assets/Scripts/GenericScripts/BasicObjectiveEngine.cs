@@ -10,6 +10,9 @@ public class BasicObjectiveEngine{
 	public Dictionary <int,BasicObjective> objectiveHistory;
 	public int objectiveIterationCount = 0;
 
+	public BasicObjectiveEngine(){
+	
+	}
 	public BasicObjective GetState(){
 		return currentObjective; 
 	}
