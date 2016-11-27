@@ -18,8 +18,7 @@ public class BasicNarrativeEngine{
 	public void AddCurrentNarrativeTextToHistory(){
 		currentNarrativeText.MarkTime ();
 		narrativeSelectionHistory.Add (narrativeIterationCount, currentNarrativeText);
-		//Until I figure out how to log the time wiht a data pair a debug log
-		Debug.Log("You have just stored " + currentNarrativeText + " at index value" + narrativeIterationCount + " the current time is " + Time.time);
+	
 		narrativeIterationCount++;
 
 	}
@@ -29,11 +28,25 @@ public class BasicNarrativeEngine{
 			Debug.Log ("There is already an item with the stateID " + narrativeKeyName + " as a key");
 		}else{
 		}
-
 		//Assign key to state;
 		narrativeTextToAdd.keyName = narrativeKeyName;
 		narrativeFullList.Add (narrativeKeyName, narrativeTextToAdd);
 	}
+    public BasicNarrativeText GetHeaviestNarrativeKey(int narrativeLayer, Dictionary<string,BasicNarrativeText> dictionaryToCheck) {
+        BasicNarrativeText winningText = null;
+        float highestWeight = 0;
+        foreach (BasicNarrativeText myText in dictionaryToCheck.Values) {
+            if (myText.narrativeLayer == narrativeLayer) {
+                if (myText.narrativeWeight < highestWeight)
+                {
+                    winningText = myText;
+                    highestWeight = myText.narrativeWeight;
+             
+                }
 
+            }
+        }
+        return winningText;
+    }
 
 }
