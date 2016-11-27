@@ -30,7 +30,10 @@ public class UIEngine : MonoBehaviour {
 		
 	}
 	public void ShowCursor(){
+
 	}
+    public void HideCursor() {
+    }
 	public void LockCursor(){
 	}
 }
