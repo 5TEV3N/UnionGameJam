@@ -14,7 +14,7 @@ public class ObjectsInteractions
 
     private BasicItem gameItem = new BasicItem();
 
-    public void HighlightOnHover(GameObject p_thisGameObject, Renderer p_interactableObjRender, Color p_objOriginalColor) //, Renderer p_interactableObjRender, Color p_objOriginalColor
+    public void HighlightOnHover(GameObject p_thisGameObject, Renderer p_interactableObjRender, Color p_objOriginalColor, bool p_higlighted)
     {
        orginalColor = p_objOriginalColor;
        interactableObjRender = p_interactableObjRender;
@@ -23,14 +23,16 @@ public class ObjectsInteractions
        interactableObjRender = interactableObj.GetComponent<Renderer>();
        orginalColor = interactableObjRender.material.color;
 
-        if (isHighlighted == true)
+        if (p_higlighted == true)
         {
             interactableObjRender.material.color = orginalColor + new Color32(200, 200, 200, 1);
         }
 
-        if (isHighlighted == false)
+        if (p_higlighted == false)
         {
-            interactableObjRender.material.color = orginalColor;
+            //interactableObjRender.material.color = orginalColor;
+            interactableObjRender.material.color = Color.blue;
+            Debug.Log("asdf");
         }
     }
 

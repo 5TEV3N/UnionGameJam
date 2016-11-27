@@ -59,9 +59,14 @@ public class PlayerController : MonoBehaviour
         {
             highlightThis.isHighlighted = true;
             highlightThis.interactableObjRender = myHit.transform.GetComponent<Renderer>();
+
             if (highlightThis.isHighlighted == true)
             {
-                highlightThis.HighlightOnHover(myHit.transform.gameObject, highlightThis.interactableObjRender, highlightThis.interactableObjRender.material.color);
+                highlightThis.HighlightOnHover(myHit.transform.gameObject, highlightThis.interactableObjRender, highlightThis.interactableObjRender.material.color, true);
+            }
+            if (Input.GetMouseButton(0))
+            {
+                highlightThis.HighlightOnHover(myHit.transform.gameObject, highlightThis.interactableObjRender, highlightThis.interactableObjRender.material.color, false);
             }
         }
 
