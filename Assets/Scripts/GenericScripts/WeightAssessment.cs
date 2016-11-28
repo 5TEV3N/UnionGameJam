@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[System.Serializable]
 public class WeightAssesment {
 
 	//Here is a generic method. Notice the generic

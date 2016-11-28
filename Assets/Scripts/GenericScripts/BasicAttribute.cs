@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[System.Serializable]
 public class BasicAttribute {
 
 	public float baseAttributeMin = 0f; // this will be our attribute, set it to a value between 0 and 1;

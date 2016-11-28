@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+[System.Serializable]
 public class BasicObjective{
 
 	public int identityNumber;

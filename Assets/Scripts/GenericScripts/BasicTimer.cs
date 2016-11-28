@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[System.Serializable]
 //you are declaring a class, not a monobehaviour, this class can be used in any function without reference
 public class BasicTimer {
 

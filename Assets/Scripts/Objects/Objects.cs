@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[System.Serializable]
 public class Objects
 {
-    private BasicItem objectVal = new BasicItem();
-    private Spawner spawn = new Spawner();
+
+    //made these public so that the inventorySystem can use them
+    public BasicItem objectVal = new BasicItem();
+    public Spawner spawn = new Spawner();
 
     public void SetObjectState()
     {

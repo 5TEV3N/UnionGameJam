@@ -16,7 +16,7 @@ public class InventorySystemA : MonoBehaviour {
     public GameObject inventoryItem;
 
     private int slotAmount;
-    public List<Item> items = new List<Item>();
+    public List<Objects> items = new List<Objects>();
     public List<GameObject> slots = new List<GameObject>();
 
     void Start()
@@ -29,28 +29,29 @@ public class InventorySystemA : MonoBehaviour {
         //Debug.Log(slotPanel.name + " is this different from" + inventoryPanel.transform.FindChild("Slot Panel").gameObject.name);
         for(int i = 0; i < slotAmount; i++)
         {
-            items.Add(new Item(0, "bon",0, "equip"));
+            items.Add(new Objects());
+            // items.Add(new Objects(0, "bon",0, "equip"));
             slots.Add(Instantiate(inventorySlot));
             slots[i].transform.SetParent(slotPanel.transform);
         }
 
-        AddItem(0);
-        AddItem(1);
+        //AddItem(0);
+        //AddItem(1);
     }
 
     public void AddItem (int id)
     {
-          Item itemToAdd = database.FetchItemByID(id);
+        Objects itemToAdd = database.FetchItemByID(id);
         for (int i = 0; i < items.Count; i++)
         {
-            if (items[i].ID == -1)
+            if (items[i].objectVal.identityNumber == -1)
             {
                 items[i] = itemToAdd;
                 GameObject itemObj = Instantiate(inventoryItem);
                 itemObj.transform.SetParent(slots[i].transform);
                 itemObj.transform.position = Vector2.zero;
-                itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
-                itemObj.name = itemToAdd.Title;
+                itemObj.GetComponent<Image>().sprite = itemToAdd.objectVal.itemIcon;
+                itemObj.name = itemToAdd.objectVal.itemName;
                 
                 break;
 
