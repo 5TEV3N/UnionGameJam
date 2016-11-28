@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 [System.Serializable]
-public class Objects
+public class Objects : MonoBehaviour
 {
 
     //made these public so that the inventorySystem can use them
