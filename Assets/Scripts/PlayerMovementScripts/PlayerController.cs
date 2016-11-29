@@ -4,10 +4,10 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     InputManager inputManager;
-    private BasicAttribute jumpHeight = new BasicAttribute();
-    private BasicAttribute playerSpeed = new BasicAttribute();
-    private ObjectsInteractions gameObjectHighlight = new ObjectsInteractions();
-    private ObjectsInteractions highlightThis = new ObjectsInteractions();
+    public BasicAttribute jumpHeight = new BasicAttribute();
+    public BasicAttribute playerSpeed = new BasicAttribute();
+    public ObjectsInteractions gameObjectHighlight = new ObjectsInteractions();
+    public ObjectsInteractions highlightThis = new ObjectsInteractions();
 
     //Stamina
     public BasicAttribute playerStamina = new BasicAttribute();

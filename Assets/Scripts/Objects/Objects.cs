@@ -3,7 +3,6 @@ using System.Collections;
 [System.Serializable]
 public class Objects : MonoBehaviour
 {
-
     //made these public so that the inventorySystem can use them
     public BasicItem objectVal = new BasicItem();
     public Spawner spawn = new Spawner();

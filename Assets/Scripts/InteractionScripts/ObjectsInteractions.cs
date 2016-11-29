@@ -12,7 +12,7 @@ public class ObjectsInteractions
     public GameObject interactableObj;
 
 
-    private BasicItem gameItem = new BasicItem();
+    public BasicItem gameItem = new BasicItem();
 
     public void HighlightOnHover(GameObject p_thisGameObject, Renderer p_interactableObjRender, Color p_objOriginalColor, bool p_higlighted)
     {
