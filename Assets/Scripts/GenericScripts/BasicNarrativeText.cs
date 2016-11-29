@@ -8,9 +8,9 @@ public class BasicNarrativeText{
 	public string keyValue;
 	//List of tags associated with this system
 	public List<BasicTag> associatedTags;
-
+	[System.NonSerialized]
 	public float timeMarker;
-
+	[System.NonSerialized]
 	public float timeOfOnset;
 	//Weight of this narrative compontent that can be used to pick text
 	public float narrativeWeight;
@@ -31,7 +31,7 @@ public class BasicNarrativeText{
 
 
 	public BasicNarrativeText(){
-		timeOfOnset = MarkTime();
+//		timeOfOnset = MarkTime();
 	}
 	public void SetNarrativeValue(string valueToSet){
 		keyValue = valueToSet;

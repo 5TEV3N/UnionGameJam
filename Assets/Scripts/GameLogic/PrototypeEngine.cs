@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NarrativeMaster : MonoBehaviour {
+public class PrototypeEngine : MonoBehaviour {
 
-	public BasicNarrativeObjectEngine narrativeManager;
+
+	bool startIntroText;
 
 	// Use this for initialization
 	void Start () {
-		narrativeManager = new BasicNarrativeObjectEngine();
+	
 	}
 	
 	// Update is called once per frame

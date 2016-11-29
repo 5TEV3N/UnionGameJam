@@ -6,6 +6,9 @@ public class BasicNarrativeEngine{
 
 	public BasicNarrativeText currentNarrativeText;
 	public BasicNarrativeText nextNarrativeText;
+	public BasicNarrativeText firstText;
+	public BasicNarrativeText secondText;
+	public BasicNarrativeText thirdText;
 	[SerializeField]
 	public Dictionary <string,BasicNarrativeText> narrativeFullList;
 	[SerializeField]
@@ -15,6 +18,11 @@ public class BasicNarrativeEngine{
 
 	//constructor
 	public BasicNarrativeEngine(){
+//		narrativeFullList = new Dictionary<string,BasicNarrativeText> (){
+//			{"Intro",  firstText},
+//			{"OldMan1", secondText},
+//			{"ScrapBook", thirdText},
+//		};
 		
 	}
 	public void AddCurrentNarrativeTextToHistory(){
