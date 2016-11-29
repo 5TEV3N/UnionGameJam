@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MissionItem : MonoBehaviour {
+public class NarrativeObject : MonoBehaviour {
 
-    public Objects objectItem;
-
+	public BasicNarrativeText narrativeObject;
 	// Use this for initialization
 	void Start () {
-        objectItem = new Objects();
-
-    }
+		narrativeObject = new BasicNarrativeText();
+	}
 	
 	// Update is called once per frame
 	void Update () {

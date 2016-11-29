@@ -6,7 +6,9 @@ public class BasicNarrativeEngine{
 
 	public BasicNarrativeText currentNarrativeText;
 	public BasicNarrativeText nextNarrativeText;
+	[SerializeField]
 	public Dictionary <string,BasicNarrativeText> narrativeFullList;
+	[SerializeField]
 	public Dictionary <int,BasicNarrativeText> narrativeSelectionHistory;
 	public int narrativeIterationCount = 0;
 	private int narrativeLayerInUse;

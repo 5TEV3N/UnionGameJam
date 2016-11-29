@@ -10,6 +10,7 @@ public class BasicNarrativeText{
 	public List<BasicTag> associatedTags;
 
 	public float timeMarker;
+
 	public float timeOfOnset;
 	//Weight of this narrative compontent that can be used to pick text
 	public float narrativeWeight;
@@ -60,6 +61,7 @@ public class BasicNarrativeText{
 		narrativeLayer = layerToSet;
 	}
 	public float MarkTime(){
+		
 		timeMarker = Time.time;
 		return timeMarker;
 	}
