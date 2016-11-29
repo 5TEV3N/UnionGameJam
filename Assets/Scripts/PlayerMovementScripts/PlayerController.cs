@@ -9,6 +9,17 @@ public class PlayerController : MonoBehaviour
     private ObjectsInteractions gameObjectHighlight = new ObjectsInteractions();
     private ObjectsInteractions highlightThis = new ObjectsInteractions();
 
+    //Stamina
+    public BasicAttribute playerStamina = new BasicAttribute();
+    public bool isRunning;
+    public bool canRun;
+    public float staminaDecay;
+
+
+    //Health
+    public BasicAttribute playerHealth = new BasicAttribute();
+
+
     [Header("Values")]
     public float mouseSensitivity = 1;                               // Mouse sensitivity
     public float jumpHeightIntensifier = 1;                          // How far i can jump
@@ -45,6 +56,8 @@ public class PlayerController : MonoBehaviour
 
         jumpHeight.AdjustAttribute("AdjustToNumber", 1f);
         playerSpeed.AdjustAttribute("AdjustToNumber", 1f);
+        playerStamina.AdjustAttribute("AdjustToNumber", 1f);
+        playerHealth.AdjustAttribute("AdjustToNumber", 1f);
     }
 
     void Update()
@@ -73,6 +86,15 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(gameObject.transform.position, Vector3.down * floorRayDistance, Color.black);
         Physics.Raycast(jumpingRay, out floorHit);
         jumpingRay = new Ray(gameObject.transform.position, Vector3.down);
+
+        //Reduce stamina here
+        if (isRunning == true) {
+            ReduceStamina();
+        }
+        if (isRunning == false)
+        {
+            IncreaseStamina();
+        }
     }
 
     public void Mouselook(float mouseXAxis, float mouseYAxis)
@@ -135,11 +157,34 @@ public class PlayerController : MonoBehaviour
 
     public void Sprint()
     {
-        maxVelocity = originalMaxVelocity + 2;
+       
+        if (canRun == true && (playerStamina.baseAttributeCurrent > 0))
+        { 
+           
+            isRunning = true;
+            maxVelocity = originalMaxVelocity + 2; // main code
+            
+        }
+    }
+
+    public void ReduceStamina() {
+        Debug.Log(staminaDecay + "before transformation");
+        float tempStaminaDecay = Mathf.Clamp01((staminaDecay * Time.deltaTime));
+        Debug.Log(staminaDecay + "after");
+        playerStamina.AdjustAttribute("SubtractAmount", tempStaminaDecay);
+    }
+
+    public void IncreaseStamina()
+    {
+        Debug.Log(staminaDecay + "before transformation");
+        float tempStaminaDecay = Mathf.Clamp01((staminaDecay * Time.deltaTime));
+        Debug.Log(staminaDecay + "after");
+        playerStamina.AdjustAttribute("AddAmount", tempStaminaDecay);
     }
 
     public void StopSprinting()
     {
+        isRunning = false;
         maxVelocity = originalMaxVelocity;
     }
 

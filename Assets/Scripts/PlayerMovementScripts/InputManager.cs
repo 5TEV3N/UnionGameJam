@@ -54,6 +54,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            
             playerController.Sprint();
         }
 
