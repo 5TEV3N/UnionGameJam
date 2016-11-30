@@ -4,20 +4,20 @@ using System.Collections.Generic;
 [System.Serializable]
 public class BasicObjectiveEngine{
 
-	public BasicObjective currentObjective;
-	public BasicObjective nextObjective;
-	public List <BasicObjective> objectiveFullList;
-	public List <BasicObjective> objectiveHistory;
+	public Objective currentObjective;
+	public Objective nextObjective;
+	public List <Objective> objectiveFullList;
+	public List <Objective> objectiveHistory;
 	public int objectiveIterationCount = 0;
 
 	public BasicObjectiveEngine(){
 	
 	}
-	public BasicObjective GetState(){
+	public Objective GetCurrentObjective(){
 		return currentObjective; 
 	}
 
-	public void SetObjective(BasicObjective p_nextObjective = null){
+	public void SetObjective(Objective p_nextObjective = null){
 		if (nextObjective == null && p_nextObjective == null) {
 			Debug.Log ("SetState cannot complete the function as Next State and the argument parameter are null");
 			return;
@@ -29,7 +29,7 @@ public class BasicObjectiveEngine{
 		AddCurrentObjectiveToHistory ();
 
 	}
-	public bool CheckState(BasicObjective p_objectiveToCheck, BasicObjective p_checkAgainstObjective){
+	public bool CheckCurrentObjective(Objective p_objectiveToCheck, Objective p_checkAgainstObjective){
 		p_objectiveToCheck = currentObjective;
 		if (p_objectiveToCheck == p_checkAgainstObjective) {
 			return true;
@@ -41,23 +41,23 @@ public class BasicObjectiveEngine{
 		currentObjective = null;
 	}
 	public void AddCurrentObjectiveToHistory(){
-		currentObjective.MarkTime ();
-		objectiveHistory.Add (objectiveIterationCount, currentObjective);
+		currentObjective.thisObjective.MarkTime ();
+		objectiveHistory.Add (currentObjective);
 		//Until I figure out how to log the time wiht a data pair a debug log
 		Debug.Log("You have just stored " + currentObjective + " at index value" + objectiveIterationCount + " the current time is " + Time.time);
 		objectiveIterationCount++;
 
 	}
-	public void AddObjectiveToList(string objectiveName,BasicObjective objectiveToAdd){
-		BasicObjective temp = null;
-		if (objectiveFullList.TryGetValue(objectiveName, out temp)){
-			Debug.Log ("There is already an item with the stateID " + objectiveName + " as a key");
+	public void AddObjectiveToList(Objective objectiveToAdd){
+		if (objectiveFullList.Contains(objectiveToAdd)){
+			Debug.Log ("There is already an item with the stateID " + objectiveToAdd + " as a key");
+            return;
 		}else{
-		}
+            objectiveFullList.Add(objectiveToAdd);
+        }
 
 		//Assign key to state;
-		objectiveToAdd.objectiveName = objectiveName;
-		objectiveFullList.Add (objectiveName, objectiveToAdd);
+		
 	}
 
 }
