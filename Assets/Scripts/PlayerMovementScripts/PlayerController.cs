@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(startMarker, myRay.direction * camRayDistance, Color.magenta);
 
-        if (Physics.Raycast(myRay, out myHit, camRayDistance, interactableMask))
+        if(Physics.Raycast(myRay, out myHit, camRayDistance, interactableMask)) // Must fix !!
         {
             highlightThis.isHighlighted = true;
             highlightThis.interactableObjRender = myHit.transform.GetComponent<Renderer>();
