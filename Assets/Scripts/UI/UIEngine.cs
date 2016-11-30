@@ -11,14 +11,14 @@ public class UIEngine : MonoBehaviour {
 	public bool isMenuShowing;
 
 	//Show and hide narrative. Set narrative in Display with textToShow
-	public void DisableNarrativeText(Text narrativeBox)
+	public void DisableNarrativeText() //Text narrativeBox
 	{
-		narrativeBox.gameObject.SetActive(false);
+		uiTextBoxToUse.gameObject.SetActive(false);
 	}
-	public void DisplayNarrativeText(string textToShow, Text narrativeBox)
+	public void DisplayNarrativeText(string textToShow) //Text narrativeBox
 	{
-		narrativeBox.gameObject.SetActive(true);
-		narrativeBox.text = textToShow;
+		uiTextBoxToUse.gameObject.SetActive(true);
+		uiTextBoxToUse.text = textToShow;
 	}
 	public void DisplayMenu(){
 		

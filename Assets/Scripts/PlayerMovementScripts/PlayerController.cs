@@ -168,17 +168,17 @@ public class PlayerController : MonoBehaviour
     }
 
     public void ReduceStamina() {
-        Debug.Log(staminaDecay + "before transformation");
+        //Debug.Log(staminaDecay + "before transformation");
         float tempStaminaDecay = Mathf.Clamp01((staminaDecay * Time.deltaTime));
-        Debug.Log(staminaDecay + "after");
+        //Debug.Log(staminaDecay + "after");
         playerStamina.AdjustAttribute("SubtractAmount", tempStaminaDecay);
     }
 
     public void IncreaseStamina()
     {
-        Debug.Log(staminaDecay + "before transformation");
+        //Debug.Log(staminaDecay + "before transformation");
         float tempStaminaDecay = Mathf.Clamp01((staminaDecay * Time.deltaTime));
-        Debug.Log(staminaDecay + "after");
+        //Debug.Log(staminaDecay + "after");
         playerStamina.AdjustAttribute("AddAmount", tempStaminaDecay);
     }
 

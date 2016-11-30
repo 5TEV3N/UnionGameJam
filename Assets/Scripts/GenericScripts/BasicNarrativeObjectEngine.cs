@@ -12,7 +12,7 @@ public class BasicNarrativeObjectEngine{
 //	public NarrativeObject secondText;
 //	public NarrativeObject thirdText;
 	[SerializeField]
-	public List <NarrativeObject> narrativeFullList = new List<NarrativeObject>();
+	public List <NarrativeObject> narrativeFullList;
 	[SerializeField]
 	public List <NarrativeObject> narrativeSelectionHistory;
 	public int narrativeIterationCount = 0;
@@ -61,6 +61,7 @@ public class BasicNarrativeObjectEngine{
     }
 	public NarrativeObject GetNarrativeKeyByKeyName(string keyName){
 		foreach (NarrativeObject myText in narrativeFullList) {
+			Debug.Log("I am forEaching in the GetNarrativeKeybyname function");
 			if (myText.narrativeObject.keyName == keyName) {
 				return myText;
 			} else {
@@ -68,6 +69,13 @@ public class BasicNarrativeObjectEngine{
 			}
 		}
 		return nullObject;
+	}
+
+	public void ListAllNarrativeKeys(){
+		foreach (NarrativeObject myText in narrativeFullList) {
+			Debug.Log (myText.narrativeObject.keyName);
+		}
+		
 	}
 
 }
