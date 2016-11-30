@@ -13,6 +13,8 @@ public class NarrativeEngine : MonoBehaviour {
     // Use this for initialization
     void Start () {
         timerToUse = new BasicTimer(0f);
+        narrativeManager.ListAllNarrativeKeys();
+        
     }
 	
 	// Update is called once per frame

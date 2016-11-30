@@ -7487,6 +7487,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &657277505 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011247722564, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091963377}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!1 &688445261
 GameObject:
   m_ObjectHideFlags: 0
@@ -8017,6 +8023,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &723091272 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011018035268, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091963377}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!43 &763341810
 Mesh:
   m_ObjectHideFlags: 0
@@ -8518,6 +8530,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 947024353}
   m_RootOrder: 10
+--- !u!114 &811237738 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013527926004, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091963377}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!43 &827305179
 Mesh:
   m_ObjectHideFlags: 0
@@ -11825,7 +11843,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh9932
+  m_Name: pb_Mesh12588
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -13707,6 +13725,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1275538071 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013152542152, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091963377}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!43 &1307240506
 Mesh:
   m_ObjectHideFlags: 0
@@ -14837,6 +14861,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1491932058 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013699557904, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091963377}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!1 &1500578784
 GameObject:
   m_ObjectHideFlags: 0
@@ -18589,6 +18619,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1788649883 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011676260426, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091963377}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!1 &1820570561
 GameObject:
   m_ObjectHideFlags: 0
@@ -22242,6 +22278,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010075039442, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 7.667576
@@ -22274,6 +22315,36 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[0]
+      value: 
+      objectReference: {fileID: 657277505}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[1]
+      value: 
+      objectReference: {fileID: 723091272}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1275538071}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1491932058}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[4]
+      value: 
+      objectReference: {fileID: 811237738}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[5]
+      value: 
+      objectReference: {fileID: 1788649883}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
   m_IsPrefabParent: 0
