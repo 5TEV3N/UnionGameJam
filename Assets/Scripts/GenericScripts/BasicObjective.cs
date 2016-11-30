@@ -10,16 +10,22 @@ public class BasicObjective{
 	public float timeMarker;
 	public float timeOfOnset;
 	public int objectiveLayer;
-	// use numbers 10-100 for objective steps to match them with corresponding narrative text sets.
+    // use numbers 10-100 for objective steps to match them with corresponding narrative text sets.
 
 
-	public BasicObjective(int p_identityNumber , string p_objectiveName, int p_objectiveLayer =1000, float timeStart = 0){
-		identityNumber = p_identityNumber;
-		objectiveName = p_objectiveName;
-		timeOfOnset = MarkTime ();
-        objectiveLayer = p_objectiveLayer;
+        //This is for editor Use,
+    public BasicObjective() {
 
     }
+
+       //This is for script use (later)
+	//public BasicObjective(int p_identityNumber , string p_objectiveName, int p_objectiveLayer =1000, float timeStart = 0){
+	//	identityNumber = p_identityNumber;
+	//	objectiveName = p_objectiveName;
+	//	timeOfOnset = MarkTime ();
+ //       objectiveLayer = p_objectiveLayer;
+
+ //   }
 	public float MarkTime(){
 			timeMarker = Time.time;
 			return timeMarker;
@@ -37,5 +43,16 @@ public class BasicObjective{
 			return false;
 		}
 	}
+    public bool CheckObjectiveStatus(bool thingToTest) {
+        if (thingToTest == true)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+
+  
+    }
 
 }
