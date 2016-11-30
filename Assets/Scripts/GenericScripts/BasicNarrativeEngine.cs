@@ -109,5 +109,12 @@ public class BasicNarrativeEngine{
     public void SetNarrativeLayerInUse(int layerToSet) {
         narrativeLayerInUse = layerToSet;
     }
+    public void SetcurrentNarrativeText(NarrativeObject currentText) {
+        currentNarrativeText = currentText;
+    }
+    public void SetNextNarrativeText(NarrativeObject nextText)
+    {
+        nextNarrativeText = nextText;
+    }
 
 }

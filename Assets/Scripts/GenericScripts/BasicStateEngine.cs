@@ -27,7 +27,6 @@ public class BasicStateEngine {
 		}
 		currentState = p_nextState;
 		AddCurrentStateToHistory ();
-
 	}
 	public bool CheckState(State p_stateToCheck, State p_checkAgainstState){
 		p_stateToCheck = currentState;
