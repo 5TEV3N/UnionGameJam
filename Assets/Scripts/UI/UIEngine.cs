@@ -6,7 +6,8 @@ public class UIEngine : MonoBehaviour {
 
     // public NarrativeUI enterRoomUI;
     public State ui_EngineState;
-	public string textToShow;
+    public BasicStateEngine uiStateEngine = new BasicStateEngine();
+    public string textToShow;
 	public Text uiTextBoxToUse;
 	public bool isNarrativeUIShowing;
 	public bool isMenuShowing;
