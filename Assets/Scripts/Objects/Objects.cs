@@ -5,6 +5,7 @@ public class Objects : MonoBehaviour
 {
     //made these public so that the inventorySystem can use them
     public BasicItem objectVal = new BasicItem();
+    public State objectState = new State();
     public Spawner spawn = new Spawner();
 
 	//PRototype START
