@@ -4,59 +4,110 @@ using System.Collections.Generic;
 [System.Serializable]
 public class BasicNarrativeEngine{
 
-	public BasicNarrativeText currentNarrativeText;
-	public BasicNarrativeText nextNarrativeText;
-	public BasicNarrativeText firstText;
-	public BasicNarrativeText secondText;
-	public BasicNarrativeText thirdText;
+
+    //we moved from basicText to GameObject text for convience with editor and time constraints, this means that access times are slower, so long term solution will require rework, but short term it will be effective.
+	public NarrativeObject currentNarrativeText;
+	public NarrativeObject nextNarrativeText;
+    private NarrativeObject nullObject; //used to pass an object where others dare not tread.
+    [SerializeField]
+	public List <NarrativeObject> narrativeFullList;
 	[SerializeField]
-	public Dictionary <string,BasicNarrativeText> narrativeFullList;
-	[SerializeField]
-	public Dictionary <int,BasicNarrativeText> narrativeSelectionHistory;
+	public List<NarrativeObject> narrativeSelectionHistory;
 	public int narrativeIterationCount = 0;
-	private int narrativeLayerInUse;
+	private int narrativeLayerInUse; // will be
 
 	//constructor
 	public BasicNarrativeEngine(){
-//		narrativeFullList = new Dictionary<string,BasicNarrativeText> (){
-//			{"Intro",  firstText},
-//			{"OldMan1", secondText},
-//			{"ScrapBook", thirdText},
-//		};
-		
 	}
+
 	public void AddCurrentNarrativeTextToHistory(){
-		currentNarrativeText.MarkTime ();
-		narrativeSelectionHistory.Add (narrativeIterationCount, currentNarrativeText);
-	
+		currentNarrativeText.narrativeObject.MarkTime ();
+		narrativeSelectionHistory.Add (currentNarrativeText);
 		narrativeIterationCount++;
 
 	}
-	public void AddNarrativeTextToList(string narrativeKeyName,BasicNarrativeText narrativeTextToAdd){
-		BasicNarrativeText temp = null;
-		if (narrativeFullList.TryGetValue(narrativeKeyName, out temp)){
-			Debug.Log ("There is already an item with the stateID " + narrativeKeyName + " as a key");
-		}else{
-		}
-		//Assign key to state;
-		narrativeTextToAdd.keyName = narrativeKeyName;
-		narrativeFullList.Add (narrativeKeyName, narrativeTextToAdd);
+    public void AddNarrativeTextToList(NarrativeObject narrativeTextToAdd)
+    {
+    
+            if (narrativeFullList.Contains(narrativeTextToAdd))
+            {
+                Debug.Log("There is already an item of that type " + narrativeTextToAdd + " as a key");
+            }
+            else
+            //if it isn't in the list add it
+            {
+                Debug.Log("Adding " + narrativeTextToAdd + " to the registry");
+                narrativeFullList.Add(narrativeTextToAdd);
+            }
+            //Assign key to state;
 	}
-    public BasicNarrativeText GetHeaviestNarrativeKey(int narrativeLayer, Dictionary<string,BasicNarrativeText> dictionaryToCheck) {
-        BasicNarrativeText winningText = null;
+
+    //This gets the most salient narrative element in the list, powerful tool can check on layers, or just strongest message overall.
+    public NarrativeObject GetHeaviestNarrativeKey(int narrativeLayer = -1, List<NarrativeObject> listToCheck = null) {
+        NarrativeObject winningText = null;
         float highestWeight = 0;
-        foreach (BasicNarrativeText myText in dictionaryToCheck.Values) {
-            if (myText.narrativeLayer == narrativeLayer) {
-                if (myText.narrativeWeight < highestWeight)
+        if (listToCheck == null) {
+            listToCheck = narrativeFullList;
+        }
+        if (narrativeLayer == -1)
+        {
+            Debug.Log("Default state selected, polling all layers.");
+            foreach (NarrativeObject myText in listToCheck)
+            {
+                if (myText.narrativeObject.narrativeWeight < highestWeight)
                 {
                     winningText = myText;
-                    highestWeight = myText.narrativeWeight;
-             
+                    highestWeight = myText.narrativeObject.narrativeWeight;
+                    Debug.Log("New best heaviest text: " + myText + " with a weight of " + highestWeight);
                 }
+            }
+        }
+        else
+        {
+            foreach (NarrativeObject myText in listToCheck)
+            {
+                if (myText.narrativeObject.narrativeLayer == narrativeLayer)
+                {
+                    if (myText.narrativeObject.narrativeWeight < highestWeight)
+                    {
+                        winningText = myText;
+                        highestWeight = myText.narrativeObject.narrativeWeight;
+                        Debug.Log("New best heaviest text: " + myText + " with a weight of " + highestWeight);
+                    }
+
+                }
+            }
+        }
+        Debug.Log(winningText + " was selected");
+        return winningText;
+    }
+    public NarrativeObject GetNarrativeKeyByKeyName(string keyName)
+    {
+        foreach (NarrativeObject myText in narrativeFullList)
+        {
+            Debug.Log("I am forEaching in the GetNarrativeKeybyname function");
+            if (myText.narrativeObject.keyName == keyName)
+            {
+                return myText;
+            }
+            else
+            {
 
             }
         }
-        return winningText;
+        return nullObject;
+    }
+
+    public void ListAllNarrativeKeys()
+    {
+        foreach (NarrativeObject myText in narrativeFullList)
+        {
+            Debug.Log(myText.narrativeObject.keyName);
+        }
+
+    }
+    public void SetNarrativeLayerInUse(int layerToSet) {
+        narrativeLayerInUse = layerToSet;
     }
 
 }

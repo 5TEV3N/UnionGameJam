@@ -901,6 +901,14 @@ MonoBehaviour:
     - {fileID: 723091272}
     narrativeSelectionHistory: []
     narrativeIterationCount: 0
+  timerTime: 0
+  goTimer: 0
+  startIntroText: 1
+  starOldManText1: 0
+  starOldManText2: 0
+  starOldManText3: 0
+  startObjectiveText1: 0
+  deadBool: 0
 --- !u!43 &92878126
 Mesh:
   m_ObjectHideFlags: 0
