@@ -51,31 +51,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b03d701228b4373a8f05561b0e8a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  g_EngineState: {fileID: 0}
   gameObjectiveEngine:
-    currentObjective:
-      identityNumber: 0
-      objectiveName: 
-      objectiveMessage: 
-      timeMarker: 0
-      timeOfOnset: 0
-      objectiveLayer: 0
-    nextObjective:
-      identityNumber: 0
-      objectiveName: 
-      objectiveMessage: 
-      timeMarker: 0
-      timeOfOnset: 0
-      objectiveLayer: 0
+    currentObjective: {fileID: 0}
+    nextObjective: {fileID: 0}
+    objectiveFullList: []
+    objectiveHistory: []
     objectiveIterationCount: 0
   gameStateEngine:
-    currentState:
-      stateID: 0
-      stateName: 
-      timeMarker: 0
-      timeOfOnset: 0
-    nextState:
-      stateID: 0
-      stateName: 
-      timeMarker: 0
-      timeOfOnset: 0
+    currentState: {fileID: 0}
+    nextState: {fileID: 0}
+    stateFullList: []
+    stateHistory: []
     stateIterationCount: 0
