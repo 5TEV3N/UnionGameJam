@@ -4,20 +4,20 @@ using System.Collections.Generic;
 [System.Serializable]
 public class BasicStateEngine {
 
-	public BasicState currentState;
-	public BasicState nextState;
-	public Dictionary <string,BasicState> stateFullList;
-	public Dictionary <int,BasicState> stateHistory;
+	public State currentState;
+	public State nextState;
+	public List <State> stateFullList;
+	public List <State> stateHistory;
 	public int stateIterationCount = 0;
 
 	public BasicStateEngine(){
 	}
 
-	public BasicState GetState(){
+	public State GetState(){
 		return currentState; 
 	}
 
-	public void SetState(BasicState p_nextState = null){
+	public void SetState(State p_nextState = null){
 		if (nextState == null && p_nextState == null) {
 			Debug.Log ("SetState cannot complete the function as Next State and the argument parameter are null");
 			return;
@@ -29,7 +29,7 @@ public class BasicStateEngine {
 		AddCurrentStateToHistory ();
 
 	}
-	public bool CheckState(BasicState p_stateToCheck, BasicState p_checkAgainstState){
+	public bool CheckState(State p_stateToCheck, State p_checkAgainstState){
 		p_stateToCheck = currentState;
 		if (p_stateToCheck == p_checkAgainstState) {
 			return true;
@@ -41,22 +41,20 @@ public class BasicStateEngine {
 		currentState = null;
 	}
 	public void AddCurrentStateToHistory(){
-		currentState.MarkTime ();
-		stateHistory.Add (stateIterationCount, currentState);
+		currentState.thisState.MarkTime ();
+		stateHistory.Add (currentState);
 		//Until I figure out how to log the time wiht a data pair a debug log
 		Debug.Log("You have just stored " + currentState + " at index value" + stateIterationCount + " the current time is " + Time.time);
 		stateIterationCount++;
 
 	}
-	public void AddStateToList(string stateName,BasicState stateToAdd){
-		BasicState temp = null;
-		if (stateFullList.TryGetValue(stateName, out temp)){
-			Debug.Log ("There is already an item with the stateID " + stateName + " as a key");
+	public void AddStateToList(State stateToAdd){
+		if (stateFullList.Contains(stateToAdd)){
+			Debug.Log ("There is already an item with the stateID " + stateToAdd + " as a key");
+            return;
 		}else{
-		}
-
-		//Assign key to state;
-		stateToAdd.stateName = stateName;
-		stateFullList.Add (stateName, stateToAdd);
+            stateFullList.Add (stateToAdd);
+	    }
 	}
+		
 }
