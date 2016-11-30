@@ -891,24 +891,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 79533614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 486c6ec79ddf1432d825f2a71076f5b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ba4df486246e4d45b4f2c2fb287ddd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeManager:
     currentNarrativeText: {fileID: 0}
     nextNarrativeText: {fileID: 0}
     narrativeFullList:
+    - {fileID: 657277505}
     - {fileID: 723091272}
+    - {fileID: 1275538071}
+    - {fileID: 1491932058}
+    - {fileID: 811237738}
+    - {fileID: 1788649883}
     narrativeSelectionHistory: []
     narrativeIterationCount: 0
+  n_EngineState: {fileID: 0}
   timerTime: 0
   goTimer: 0
-  startIntroText: 1
-  starOldManText1: 0
-  starOldManText2: 0
-  starOldManText3: 0
-  startObjectiveText1: 0
-  deadBool: 0
 --- !u!43 &92878126
 Mesh:
   m_ObjectHideFlags: 0
@@ -7602,6 +7602,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &657277505 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010756569116, guid: a50b005e4ec0d496b868a4bc718bbfa8,
+    type: 2}
+  m_PrefabInternal: {fileID: 399699775}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!1 &688445261
 GameObject:
   m_ObjectHideFlags: 0
@@ -8693,6 +8699,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 947024353}
   m_RootOrder: 10
+--- !u!114 &811237738 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011478977424, guid: a50b005e4ec0d496b868a4bc718bbfa8,
+    type: 2}
+  m_PrefabInternal: {fileID: 399699775}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!43 &827305179
 Mesh:
   m_ObjectHideFlags: 0
@@ -13882,6 +13894,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1275538071 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010578980868, guid: a50b005e4ec0d496b868a4bc718bbfa8,
+    type: 2}
+  m_PrefabInternal: {fileID: 399699775}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!43 &1307240506
 Mesh:
   m_ObjectHideFlags: 0
@@ -14884,6 +14902,31 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1436036316 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010983126238, guid: a50b005e4ec0d496b868a4bc718bbfa8,
+    type: 2}
+  m_PrefabInternal: {fileID: 399699775}
+--- !u!114 &1436036317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436036316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4df486246e4d45b4f2c2fb287ddd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeManager:
+    currentNarrativeText: {fileID: 0}
+    nextNarrativeText: {fileID: 0}
+    narrativeFullList: []
+    narrativeSelectionHistory: []
+    narrativeIterationCount: 0
+  n_EngineState: {fileID: 0}
+  timerTime: 0
+  goTimer: 0
 --- !u!43 &1463599414
 Mesh:
   m_ObjectHideFlags: 0
@@ -15012,6 +15055,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1491932058 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011400419470, guid: a50b005e4ec0d496b868a4bc718bbfa8,
+    type: 2}
+  m_PrefabInternal: {fileID: 399699775}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!1 &1500578784
 GameObject:
   m_ObjectHideFlags: 0
@@ -18764,6 +18813,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &1788649883 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011849557922, guid: a50b005e4ec0d496b868a4bc718bbfa8,
+    type: 2}
+  m_PrefabInternal: {fileID: 399699775}
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
 --- !u!1 &1820570561
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class UIEngine : MonoBehaviour {
 
-	// public NarrativeUI enterRoomUI;
+    // public NarrativeUI enterRoomUI;
+    public State ui_EngineState;
 	public string textToShow;
 	public Text uiTextBoxToUse;
 	public bool isNarrativeUIShowing;
