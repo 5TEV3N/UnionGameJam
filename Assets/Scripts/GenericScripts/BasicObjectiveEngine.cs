@@ -6,8 +6,8 @@ public class BasicObjectiveEngine{
 
 	public BasicObjective currentObjective;
 	public BasicObjective nextObjective;
-	public Dictionary <string,BasicObjective> objectiveFullList;
-	public Dictionary <int,BasicObjective> objectiveHistory;
+	public List <BasicObjective> objectiveFullList;
+	public List <BasicObjective> objectiveHistory;
 	public int objectiveIterationCount = 0;
 
 	public BasicObjectiveEngine(){

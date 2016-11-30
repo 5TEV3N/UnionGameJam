@@ -13,11 +13,13 @@ public class BasicObjective{
 	// use numbers 10-100 for objective steps to match them with corresponding narrative text sets.
 
 
-	public BasicObjective(int p_identityNumber , string p_objectiveName, float timeStart = 0){
+	public BasicObjective(int p_identityNumber , string p_objectiveName, int p_objectiveLayer =1000, float timeStart = 0){
 		identityNumber = p_identityNumber;
 		objectiveName = p_objectiveName;
 		timeOfOnset = MarkTime ();
-	}
+        objectiveLayer = p_objectiveLayer;
+
+    }
 	public float MarkTime(){
 			timeMarker = Time.time;
 			return timeMarker;

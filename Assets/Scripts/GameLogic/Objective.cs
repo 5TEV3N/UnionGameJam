@@ -1,0 +1,17 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Objective : MonoBehaviour {
+
+    BasicObjective
+
+    // Use this for initialization
+    void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}

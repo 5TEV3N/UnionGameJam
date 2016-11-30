@@ -8,19 +8,19 @@ public class Objects : MonoBehaviour
     public Spawner spawn = new Spawner();
 
 	//PRototype START
-	public PrototypeEngine prototyper;
+	//public PrototypeEngine prototyper;
 
-	void Awake(){
-		prototyper = GameObject.Find("GameMaster").GetComponent<PrototypeEngine>();
-	}
+	//void Awake(){
+	//	prototyper = GameObject.Find("GameMaster").GetComponent<PrototypeEngine>();
+	//}
 
 
-	void OnTriggerEnter(Collider other){
-		if (other.tag == "Player") {
-			prototyper.DoNextThing(prototyper.startObjectiveText1,prototyper.starOldManText2);
-		}
+	//void OnTriggerEnter(Collider other){
+	//	if (other.tag == "Player") {
+	//		prototyper.DoNextThing(prototyper.startObjectiveText1,prototyper.starOldManText2);
+	//	}
 		
-	}
+	//}
 
 	//Prototype END
     public void SetObjectState()
