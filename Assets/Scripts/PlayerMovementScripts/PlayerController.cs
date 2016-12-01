@@ -4,12 +4,14 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     InputManager inputManager;
+
     public BasicAttribute jumpHeight = new BasicAttribute();
     public BasicAttribute playerSpeed = new BasicAttribute();
     public ObjectsInteractions gameObjectHighlight = new ObjectsInteractions();
     public ObjectsInteractions highlightThis = new ObjectsInteractions();
 
     //Stamina
+    [Header("Stamina - Attributes")]
     public BasicAttribute playerStamina = new BasicAttribute();
     public bool isRunning;
     public bool canRun;
@@ -17,6 +19,7 @@ public class PlayerController : MonoBehaviour
 
 
     //Health
+    [Header("Health - Attributes")]
     public BasicAttribute playerHealth = new BasicAttribute();
 
 
@@ -197,21 +200,3 @@ public class PlayerController : MonoBehaviour
     }
 
 }
-/*
-public GameObject CastRay() // Disclamer, I did this 2nd semester
-{    
-    //Actually Cast the ray on Command --> output collider to myhit ("out" keyword). myhit=  has information from myray and puts it into myHit
-    Physics.Raycast(myRay, out myHit, camRayDistance);   // Casts a ray
-    //Print collider hit, filter null errors
-    if (myHit.collider != null)
-    {
-        //print (myHit.collider.gameObject.GetComponent<C_Tiles>().id); <-- Example of printing something from an object
-        return myHit.collider.gameObject.GetComponent<HighlightThisObject>().HighlightThisObjectPlease() ; // gets the actual game object within the scene, scripts and all
-    }
-    else
-    {
-        return null; //returns nothing
-    }
-
-}
-*/
