@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class UIEngine : MonoBehaviour {
 
     // public NarrativeUI enterRoomUI;
-    public State ui_EngineState;
+	//Redundant public State ui_EngineState;
     public BasicStateEngine uiStateEngine = new BasicStateEngine();
     public string textToShow;
 	public Text uiTextBoxToUse;

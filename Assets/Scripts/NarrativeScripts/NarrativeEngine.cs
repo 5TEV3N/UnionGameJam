@@ -5,7 +5,7 @@ public class NarrativeEngine : MonoBehaviour {
 
 
     public BasicNarrativeEngine narrativeManager;
-    public State n_EngineState;
+	//Redundant public State n_EngineState;
     public BasicStateEngine narrativeStateEngine = new BasicStateEngine();
     BasicTimer timerToUse;
     public float timerTime;
