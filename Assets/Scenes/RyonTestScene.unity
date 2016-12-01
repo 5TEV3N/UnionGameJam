@@ -7556,6 +7556,55 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &678038001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011123400716, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 678038002}
+  - 114: {fileID: 678038003}
+  m_Layer: 0
+  m_Name: LoseMessage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &678038002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000014030836932, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 678038001}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1505804939}
+  m_RootOrder: 7
+--- !u!114 &678038003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000011247722564, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 678038001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeObject:
+    keyName: LOS1
+    keyValue: You could've been so much more
+    associatedTags: []
+    narrativeWeight: 1000
+    narrativeLayer: 4
 --- !u!1 &688445261
 GameObject:
   m_ObjectHideFlags: 0
@@ -8789,6 +8838,55 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &864981207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011123400716, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 864981208}
+  - 114: {fileID: 864981209}
+  m_Layer: 0
+  m_Name: WinMessage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &864981208
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000014030836932, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864981207}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1505804939}
+  m_RootOrder: 6
+--- !u!114 &864981209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000011247722564, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 864981207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeObject:
+    keyName: WIN1
+    keyValue: YOU WIN RENE, YOU ROCK
+    associatedTags: []
+    narrativeWeight: 1000
+    narrativeLayer: 3
 --- !u!1 &891946640
 GameObject:
   m_ObjectHideFlags: 0
@@ -14075,14 +14173,14 @@ MonoBehaviour:
   - {fileID: 1536411881}
   - {fileID: 1601403775}
   masterToUse: {fileID: 68720003}
-  uiMaster: {fileID: 0}
+  uiMaster: {fileID: 1601403775}
   stateToSet: {fileID: 0}
   objectiveToSet: {fileID: 1427011529}
   narrativeLayer: 0
   narrativeKey: 
-  commandToUse: SetNarrativeKey
-  onTriggerEnter: 1
-  onTriggerExit: 0
+  commandToUse: SetObjective
+  onTriggerEnter: 0
+  onTriggerExit: 1
   onTriggerStay: 0
   t4Layerf4Key: 1
 --- !u!1 &1365732070
@@ -15466,6 +15564,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 947024353}
   m_RootOrder: 20
+--- !u!4 &1505804939 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013192087722, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 2091963377}
 --- !u!43 &1529837118
 Mesh:
   m_ObjectHideFlags: 0
@@ -22601,6 +22704,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011596455544, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: gameObjectiveEngine.objectiveFullList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010075039442, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 7.667576
@@ -22636,7 +22749,7 @@ Prefab:
     - target: {fileID: 114000013152542152, guid: 3dd775877a481544f93178df4e483e5d,
         type: 2}
       propertyPath: narrativeObject.narrativeLayer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000011018035268, guid: 3dd775877a481544f93178df4e483e5d,
         type: 2}
@@ -22653,6 +22766,56 @@ Prefab:
       propertyPath: uiTextBoxToUse
       value: 
       objectReference: {fileID: 705664000}
+    - target: {fileID: 114000011676260426, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeObject.narrativeLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013527926004, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeObject.narrativeLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013699557904, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeObject.narrativeLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011247722564, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeObject.narrativeLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011247722564, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeObject.narrativeWeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013699557904, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeObject.narrativeWeight
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011676260426, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeObject.narrativeWeight
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011596455544, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: gameObjectiveEngine.objectiveFullList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1427011529}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[6]
+      value: 
+      objectReference: {fileID: 864981209}
+    - target: {fileID: 114000012435955184, guid: 3dd775877a481544f93178df4e483e5d,
+        type: 2}
+      propertyPath: narrativeManager.narrativeFullList.Array.data[7]
+      value: 
+      objectReference: {fileID: 678038003}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
   m_IsPrefabParent: 0
@@ -24078,7 +24241,7 @@ Prefab:
     - target: {fileID: 114000013976979304, guid: 4d14d0e82f4f3c340ab293bdb94da6d8,
         type: 2}
       propertyPath: thisObjective.objectiveName
-      value: OBJ2
+      value: OBJ1
       objectReference: {fileID: 0}
     - target: {fileID: 114000013976979304, guid: 4d14d0e82f4f3c340ab293bdb94da6d8,
         type: 2}
@@ -24092,7 +24255,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000011522139382, guid: 4d14d0e82f4f3c340ab293bdb94da6d8, type: 2}
       propertyPath: m_Name
-      value: Objective2
+      value: Objective1
       objectReference: {fileID: 0}
     - target: {fileID: 114000013976979304, guid: 4d14d0e82f4f3c340ab293bdb94da6d8,
         type: 2}

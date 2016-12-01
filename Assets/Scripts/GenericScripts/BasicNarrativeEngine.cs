@@ -68,11 +68,12 @@ public class BasicNarrativeEngine{
 			//Debug.Log (" I am starting GetHeaviestNArrative Else condition " + narrativeLayer);
             foreach (NarrativeObject myText in listToCheck)
             {
-				//Debug.Log (" I am doing the loop WHEEE Key " + narrativeLayer);
-				Debug.Log (myText.narrativeObject.narrativeLayer + " vs " + narrativeLayer);
+				//Debug.Log (" I am doing the loop WHEEE Key " + myText);
+				//Debug.Log (myText.narrativeObject.narrativeLayer + " vs " + narrativeLayer);
                 if (myText.narrativeObject.narrativeLayer == narrativeLayer)
 				{ Debug.Log (" I am looking at all of the heavy objects at layer " + narrativeLayer);
-                    if (myText.narrativeObject.narrativeWeight < highestWeight)
+					Debug.Log (myText.narrativeObject.narrativeWeight + " and " + highestWeight);
+                    if (myText.narrativeObject.narrativeWeight > highestWeight)
                     {
                         winningText = myText;
                         highestWeight = myText.narrativeObject.narrativeWeight;
