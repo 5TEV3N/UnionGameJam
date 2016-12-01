@@ -13,7 +13,6 @@ public class Objective : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        thisObjective = new BasicObjective();
     }
 	
 	// Update is called once per frame

@@ -4,7 +4,7 @@ using System.Collections;
 public class EnvironmentInteractions : MonoBehaviour {
 
 	public GameObject objectToInteractWith;
-	public bool valueToSet;
+	//public bool valueToSet;
 	public GameObject[] mastersList;
 	public GameObject masterToUse;
 	public State stateToSet;
@@ -29,7 +29,8 @@ public class EnvironmentInteractions : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (onTriggerEnter == true) {
-			if (other == objectToInteractWith) {
+			if (other.gameObject == objectToInteractWith) {
+				Debug.Log("I'm executing the OnTriggerEnterScript, you are trying to pass " + commandToUse + " as a command");
 				switch (commandToUse) {
 				case "SetObjective":
 					SetObjective ();
@@ -48,7 +49,8 @@ public class EnvironmentInteractions : MonoBehaviour {
 	}
 	void OnTriggerExit(Collider other){
 		if (onTriggerExit == true) {
-			if (other == objectToInteractWith) {
+			if (other.gameObject == objectToInteractWith) {
+				Debug.Log("I'm executing the OnTriggerExitScript, you are trying to pass " + commandToUse + " as a command");
 				switch (commandToUse) {
 				case "SetObjective":
 					SetObjective ();
@@ -67,7 +69,8 @@ public class EnvironmentInteractions : MonoBehaviour {
 	}
 	void OnTriggerStay(Collider other){
 		if (onTriggerStay == true) {
-			if (other == objectToInteractWith) {
+			if (other.gameObject == objectToInteractWith) {
+				Debug.Log("I'm executing the OnTriggerStayScript, you are trying to pass " + commandToUse + " as a command");
 				switch (commandToUse) {
 				case "SetObjective":
 					SetObjective ();
@@ -105,6 +108,7 @@ public class EnvironmentInteractions : MonoBehaviour {
 		
 	}
 	public void SetBool(){
-		valueToSet = true;
+		Debug.Log("This script doesn't work, thanks for trying!");
+		//valueToSet = true;
 	}
 }
