@@ -68,7 +68,7 @@ GameObject:
   - 4: {fileID: 4000014030836932}
   - 114: {fileID: 114000011247722564}
   m_Layer: 0
-  m_Name: IntroText
+  m_Name: LoseMessage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,6 +120,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000011421456924
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011161717700}
+  - 114: {fileID: 114000013765717764}
+  m_Layer: 0
+  m_Name: WinMessage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000011516020028
 GameObject:
   m_ObjectHideFlags: 1
@@ -145,6 +161,22 @@ GameObject:
   - 4: {fileID: 4000013612614266}
   m_Layer: 0
   m_Name: NarrativeStateSelections
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000011740632972
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011110786492}
+  - 114: {fileID: 114000013847630312}
+  m_Layer: 0
+  m_Name: IntroText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -402,6 +434,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013192087722}
   m_RootOrder: 5
+--- !u!4 &4000011110786492
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011740632972}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013192087722}
+  m_RootOrder: 0
+--- !u!4 &4000011161717700
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011421456924}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013192087722}
+  m_RootOrder: 6
 --- !u!4 &4000011346362422
 Transform:
   m_ObjectHideFlags: 1
@@ -513,12 +571,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000014030836932}
+  - {fileID: 4000011110786492}
   - {fileID: 4000012683264350}
   - {fileID: 4000012269278486}
   - {fileID: 4000010373061634}
   - {fileID: 4000013947086116}
   - {fileID: 4000010931872910}
+  - {fileID: 4000011161717700}
+  - {fileID: 4000014030836932}
   m_Father: {fileID: 4000012304225098}
   m_RootOrder: 1
 --- !u!4 &4000013452760568
@@ -598,7 +658,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013192087722}
-  m_RootOrder: 0
+  m_RootOrder: 7
 --- !u!114 &114000010765312978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,7 +670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7362aed4bafe467aa418352d8af0475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ui_EngineState: {fileID: 0}
   uiStateEngine:
     currentState: {fileID: 0}
     nextState: {fileID: 0}
@@ -637,8 +696,8 @@ MonoBehaviour:
     keyValue: "Hello Bob, is that you? Thanks for stopping by, I knew you would pull
       through\u2026"
     associatedTags: []
-    narrativeWeight: 100
-    narrativeLayer: 10
+    narrativeWeight: 50
+    narrativeLayer: 0
 --- !u!114 &114000011247722564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -651,12 +710,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeObject:
-    keyName: INT1
-    keyValue: "You\u2019ve entered the house of an old man, you\u2019ve come to collect
-      what he owes to your father."
+    keyName: LOS1
+    keyValue: You could've been so much more
     associatedTags: []
-    narrativeWeight: 0
-    narrativeLayer: 0
+    narrativeWeight: 1000
+    narrativeLayer: 4
 --- !u!114 &114000011596455544
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -668,11 +726,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b03d701228b4373a8f05561b0e8a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g_EngineState: {fileID: 0}
   gameObjectiveEngine:
     currentObjective: {fileID: 0}
     nextObjective: {fileID: 0}
-    objectiveFullList: []
+    objectiveFullList:
+    - {fileID: 0}
     objectiveHistory: []
     objectiveIterationCount: 0
   gameStateEngine:
@@ -681,6 +739,8 @@ MonoBehaviour:
     stateFullList: []
     stateHistory: []
     stateIterationCount: 0
+  uiEngine: {fileID: 0}
+  narrativeEngine: {fileID: 0}
 --- !u!114 &114000011676260426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -697,8 +757,8 @@ MonoBehaviour:
     keyValue: "You feel a chill rush by as you pick up the book. The man\u2019s memories
       pour into your fingertips and through your arm as you hold it."
     associatedTags: []
-    narrativeWeight: 100
-    narrativeLayer: 10
+    narrativeWeight: 50
+    narrativeLayer: 2
 --- !u!114 &114000012435955184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,15 +774,16 @@ MonoBehaviour:
     currentNarrativeText: {fileID: 0}
     nextNarrativeText: {fileID: 0}
     narrativeFullList:
-    - {fileID: 114000011247722564}
+    - {fileID: 114000013847630312}
     - {fileID: 114000011018035268}
     - {fileID: 114000013152542152}
     - {fileID: 114000013699557904}
     - {fileID: 114000013527926004}
     - {fileID: 114000011676260426}
+    - {fileID: 114000013765717764}
+    - {fileID: 114000011247722564}
     narrativeSelectionHistory: []
     narrativeIterationCount: 0
-  n_EngineState: {fileID: 0}
   narrativeStateEngine:
     currentState: {fileID: 0}
     nextState: {fileID: 0}
@@ -748,7 +809,7 @@ MonoBehaviour:
       need to get something from it."
     associatedTags: []
     narrativeWeight: 100
-    narrativeLayer: 10
+    narrativeLayer: 1
 --- !u!114 &114000013527926004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -765,7 +826,7 @@ MonoBehaviour:
     keyValue: Go Away!!! You aren't welcome here!
     associatedTags: []
     narrativeWeight: 100
-    narrativeLayer: 10
+    narrativeLayer: 2
 --- !u!114 &114000013699557904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,5 +843,40 @@ MonoBehaviour:
     keyValue: "What are you doing? Did you open my book? You can\u2019t do that! leave
       her alone!"
     associatedTags: []
-    narrativeWeight: 100
-    narrativeLayer: 10
+    narrativeWeight: 90
+    narrativeLayer: 1
+--- !u!114 &114000013765717764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011421456924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeObject:
+    keyName: WIN1
+    keyValue: YOU WIN RENE, YOU ROCK
+    associatedTags: []
+    narrativeWeight: 1000
+    narrativeLayer: 3
+--- !u!114 &114000013847630312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011740632972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeObject:
+    keyName: INT1
+    keyValue: "You\u2019ve entered the house of an old man, you\u2019ve come to collect
+      what he owes to your father."
+    associatedTags: []
+    narrativeWeight: 1
+    narrativeLayer: 0
