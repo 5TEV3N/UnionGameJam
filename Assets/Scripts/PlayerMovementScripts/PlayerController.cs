@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public BasicAttribute playerSpeed = new BasicAttribute();
     public ObjectsInteractions gameObjectHighlight = new ObjectsInteractions();
     public ObjectsInteractions highlightThis = new ObjectsInteractions();
-
+    public ObjectsInteractions equipThis = new ObjectsInteractions();
+    
     //Stamina
     [Header("Stamina - Attributes")]
     public BasicAttribute playerStamina = new BasicAttribute();
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     [Header ("Containers")]
     public Rigidbody rb;                                             // Access the rigidbody to move
+    public Transform heldItemLocation;
     public Camera cam;                                               // Acess the Camera of the gameobject
     public LayerMask groundMask;                                     // Layer mask to check the ground
     public LayerMask interactableMask;                               // Layer mask for the player interaction
@@ -78,6 +80,7 @@ public class PlayerController : MonoBehaviour
 
         if(Physics.Raycast(myRay, out myHit, camRayDistance, interactableMask)) // Must fix !!
         {
+            GameObject interactableObject = myHit.transform.gameObject;
             highlightThis.isHighlighted = true;
             highlightThis.interactableObjRender = myHit.transform.GetComponent<Renderer>();
 
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 highlightThis.HighlightOnHover(myHit.transform.gameObject, highlightThis.interactableObjRender, highlightThis.interactableObjRender.material.color, false);
+                equipThis.HoldObject(interactableObject, heldItemLocation);
             }
         }
 
