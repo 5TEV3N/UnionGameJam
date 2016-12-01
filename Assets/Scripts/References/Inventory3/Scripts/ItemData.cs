@@ -5,7 +5,7 @@ using System;
 
 public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler,IPointerEnterHandler, IPointerExitHandler {
 
-    public Item item;
+    public Objects item;
     public int amount;
     public int slotLocation;
 

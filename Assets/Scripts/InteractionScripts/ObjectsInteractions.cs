@@ -42,6 +42,7 @@ public class ObjectsInteractions
         gameItem.itemName = p_name;
         gameItem.identityNumber = p_value;
         gameItem.itemWeight = p_weight;
+
         // Place object into your inventory
     }
 

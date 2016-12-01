@@ -7,19 +7,20 @@ public class InventorySlot : MonoBehaviour, IDropHandler {
 
     public int id;
     private InventorySystem inv;
+    public Objects resetterObject;
 
     void Start()
     {
-        inv = GameObject.Find("Inventory").GetComponent<InventorySystem>();
+        inv = GameObject.Find("Inventory Master").GetComponent<InventorySystem>();
     }
 
     public void OnDrop(PointerEventData eventData)
     {
         ItemData droppedItem = eventData.pointerDrag.GetComponent<ItemData>();
-        if (inv.items[id].ID == -1)
+        if (inv.currentInventory[id].objectVal.identityNumber == -1)
         {
-            inv.items[droppedItem.slotLocation] = new Item();
-            inv.items[id] = droppedItem.item;
+            inv.currentInventory[droppedItem.slotLocation] = resetterObject;
+            inv.currentInventory[id] = droppedItem.item;
             droppedItem.slotLocation = id;
         }
         else if(droppedItem.slotLocation != id)
@@ -33,8 +34,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler {
             droppedItem.transform.SetParent(this.transform);
             droppedItem.transform.position = this.transform.position;
 
-            inv.items[droppedItem.slotLocation] = item.GetComponent<ItemData>().item;
-            inv.items[id] = droppedItem.item;
+            inv.currentInventory[droppedItem.slotLocation] = item.GetComponent<ItemData>().item;
+            inv.currentInventory[id] = droppedItem.item;
         }
     }
 

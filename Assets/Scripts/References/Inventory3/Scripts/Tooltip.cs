@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Tooltip : MonoBehaviour {
 
-    private Item item;
+    private Objects item;
     private string data;
     private GameObject tooltip;
 
@@ -22,7 +22,7 @@ public class Tooltip : MonoBehaviour {
         }
     }
 
-	public void Activate(Item item)
+	public void Activate(Objects item)
     {
         this.item = item;
         ConstructDataString();
@@ -36,7 +36,7 @@ public class Tooltip : MonoBehaviour {
 
     public void ConstructDataString()
     {
-        data = "<color=#000000><b>" + item.Title + "</color>";
+        data = "<color=#000000><b>" + item.objectVal.itemName + "</color>";
         tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
     }
 }
