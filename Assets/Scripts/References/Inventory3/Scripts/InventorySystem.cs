@@ -9,7 +9,7 @@ public class InventorySystem : MonoBehaviour
    
 
     GameObject inventoryPanel;
-	GameObject slotPanel;
+	public GameObject slotPanel;
     //ItemDatabase database;
     public GameObject inventorySlot;
     public GameObject inventoryItem;
@@ -27,7 +27,6 @@ public class InventorySystem : MonoBehaviour
         //database = GetComponent<ItemDatabase>();
 		slotAmount = currentInventory.Count;
         inventoryPanel = GameObject.Find("Inventory Panel");
-		slotPanel = inventoryPanel.transform.FindChild("Slot Panel").gameObject;
 		//GameObject invSlotToUse = new GameObject ();
 		GameObject invSlotToUse = Instantiate(inventorySlot);
 		float vectorOffSet = 0f;

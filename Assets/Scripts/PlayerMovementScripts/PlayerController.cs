@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
     public bool canRun;
     public float staminaDecay;
 
+    //Health
+    public float healthDecay;
+    public bool isOverTime;
+    public bool isImpulse;
+
 
     //Health
     [Header("Health - Attributes")]
@@ -183,6 +188,32 @@ public class PlayerController : MonoBehaviour
         float tempStaminaDecay = Mathf.Clamp01((staminaDecay * Time.deltaTime));
         //Debug.Log(staminaDecay + "after");
         playerStamina.AdjustAttribute("AddAmount", tempStaminaDecay);
+    }
+
+    public void ReduceHealth()
+    {
+        Debug.Log(playerHealth.baseAttributeCurrent + "before transformation");
+        float temphealthDecay = 0;
+        if (isOverTime == true) {
+            temphealthDecay = Mathf.Clamp01((healthDecay * Time.deltaTime));
+            Debug.Log(healthDecay);
+        }
+        if (isImpulse == true)
+        {
+            temphealthDecay = healthDecay;
+        }
+        
+        
+        playerHealth.AdjustAttribute("SubtractAmount", temphealthDecay);
+        Debug.Log(playerHealth.baseAttributeCurrent + "after");
+    }
+
+    public void IncreaseHealth()
+    {
+        //Debug.Log(staminaDecay + "before transformation");
+        float tempHealthDecay = Mathf.Clamp01((healthDecay * Time.deltaTime));
+        //Debug.Log(staminaDecay + "after");
+        playerHealth.AdjustAttribute("AddAmount", tempHealthDecay);
     }
 
     public void StopSprinting()
