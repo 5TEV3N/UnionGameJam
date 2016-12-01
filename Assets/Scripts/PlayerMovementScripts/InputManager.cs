@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
     float mouseXAxis = 0;                        // left or right movement of mouse (camera). Positive numb = right, Negative numb = left
     float mouseYAxis = 0;                        // up or down movement of mouse (camera). Positive numb = up, Negative numb = down.
     bool cameraLock = true;                      // constantly lock the cursor in the center
+	public KeyCode InventoryKeyCode;			 // Set the KeyToOpenandCloseInventory;
+	public KeyCode PauseMenu;					 // Set the key to open and close the pause menu
 
     void Awake()
     {

@@ -36,6 +36,8 @@ public class Tooltip : MonoBehaviour {
 
     public void ConstructDataString()
     {
+
+		//PutInterestingSTuffhere
         data = "<color=#000000><b>" + item.objectVal.itemName + "</color>";
         tooltip.transform.GetChild(0).GetComponent<Text>().text = data;
     }
