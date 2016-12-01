@@ -1010,6 +1010,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101672273}
+--- !u!1 &111875837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1532396474}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1323578191}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &122084351
 GameObject:
   m_ObjectHideFlags: 1
@@ -8031,6 +8046,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 997502851}
+--- !u!1 &1003544261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1532396474}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1003544262}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1003544262
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1532396474}
+  m_GameObject: {fileID: 1003544261}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1323578191}
+  m_Father: {fileID: 2000225514}
+  m_RootOrder: 8
 --- !u!1 &1014682723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8196,35 +8240,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 834709944}
   m_IsPrefabParent: 0
---- !u!1 &1044810691
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1532396474}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1044810692}
-  m_Layer: 0
-  m_Name: Missing Prefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1044810692
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1532396474}
-  m_GameObject: {fileID: 1044810691}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1323578191}
-  m_Father: {fileID: 2000225514}
-  m_RootOrder: 8
 --- !u!1 &1048193963
 GameObject:
   m_ObjectHideFlags: 0
@@ -10384,13 +10399,13 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22416994, guid: 86bd66a1aad581444a3c8b4999ca67b1,
     type: 2}
   m_PrefabInternal: {fileID: 1532396474}
-  m_GameObject: {fileID: 1891554517}
+  m_GameObject: {fileID: 111875837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 1044810692}
+  m_Father: {fileID: 1003544262}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11497,7 +11512,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86bd66a1aad581444a3c8b4999ca67b1, type: 2}
-  m_RootGameObject: {fileID: 1044810691}
+  m_RootGameObject: {fileID: 1003544261}
   m_IsPrefabParent: 0
 --- !u!1 &1537740679
 GameObject:
@@ -14583,21 +14598,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1867892837}
---- !u!1 &1891554517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1532396474}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1323578191}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &1893714452
 Prefab:
   m_ObjectHideFlags: 0
@@ -16004,7 +16004,7 @@ RectTransform:
   - {fileID: 997502852}
   - {fileID: 101672274}
   - {fileID: 930206370}
-  - {fileID: 1044810692}
+  - {fileID: 1003544262}
   - {fileID: 479420175}
   - {fileID: 1447089820}
   - {fileID: 634493686}

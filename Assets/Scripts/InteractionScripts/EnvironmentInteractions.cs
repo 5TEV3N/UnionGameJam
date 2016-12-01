@@ -44,5 +44,5 @@ public class EnvironmentInteractions : MonoBehaviour {
 		}
 	}
 
-	SetObjective(Objective )
+	//SetObjective(Objective )
 }

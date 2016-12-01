@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InventorySystem : MonoBehaviour {
+public class InventorySystemA : MonoBehaviour {
 
 	//Variables
 
