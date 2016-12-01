@@ -1,45 +1,54 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class Audio
+public class Audio: MonoBehaviour
 {
-    public AudioSource gameAudio;
-    public float audioVolume = 0.5f;
-    public float audioFadeValue = 0;
+    public List<AudioSource> soundBites = new List<AudioSource>();
+    public AudioSource bgm;
+    public float bgmFadeInValue = 0.5f;
+    public float bgmFadeOutValue = 0f;
+    public bool startBGM = true;
 
-    public void GetAudio(AudioSource p_audio)
+    void Update()
     {
-        gameAudio = p_audio;
-        gameAudio.volume = audioVolume;
+        if (startBGM == true)
+        {
+            FadeInBGM();
+        }
+        else
+        {
+            FadeOutBGM();
+        }
     }
 
     public void PlayAudio()
     {
-        gameAudio.Play();
+        //Play any soundBites here
     }
 
-    public void FadeOutAudio()
+    public void FadeOutBGM()
     {
-        audioVolume = Mathf.Lerp (audioVolume, audioFadeValue, Time.deltaTime);
+        bgm.volume = Mathf.Lerp (bgm.volume, bgmFadeOutValue, Time.deltaTime);
     }
 
-    public void FadeInAudio()
+    public void FadeInBGM()
     {
-        audioVolume = Mathf.Lerp (audioFadeValue, audioVolume, Time.deltaTime);
+        bgm.volume = Mathf.Lerp (bgm.volume, bgmFadeInValue, Time.deltaTime);
     }
 
     public void StopAudio()
     {
-        gameAudio.Stop();
+        bgm.Stop();
     }
 
     public void MuteAudio()
     {
-        gameAudio.mute = true;
+        bgm.mute = true;
     }
 
     public void UnMuteAudio()
     {
-        gameAudio.mute = false;
+        bgm.mute = false;
     }
 }
