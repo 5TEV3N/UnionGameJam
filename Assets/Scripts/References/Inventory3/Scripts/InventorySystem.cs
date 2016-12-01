@@ -9,9 +9,9 @@ public class InventorySystem : MonoBehaviour
    
 
     GameObject inventoryPanel;
-    GameObject slotPanel;
+	GameObject slotPanel;
     //ItemDatabase database;
-    public  GameObject inventorySlot;
+    public GameObject inventorySlot;
     public GameObject inventoryItem;
 
     public int slotAmount;
@@ -25,20 +25,28 @@ public class InventorySystem : MonoBehaviour
     void Start()
     {
         //database = GetComponent<ItemDatabase>();
-        slotAmount = objectsFullList.Count;
+		slotAmount = currentInventory.Count;
         inventoryPanel = GameObject.Find("Inventory Panel");
-        slotPanel = inventoryPanel.transform.FindChild("Slot Panel").gameObject;
+		slotPanel = inventoryPanel.transform.FindChild("Slot Panel").gameObject;
+		//GameObject invSlotToUse = new GameObject ();
+		GameObject invSlotToUse = Instantiate(inventorySlot);
+		float vectorOffSet = 0f;
         for(int i = 0; i < slotAmount; i++)
         {
+			vectorOffSet += 145f;
+			Debug.Log (vectorOffSet);
+			inventoryItem = currentInventory [i].gameObject;
             Objects temp = resetObject;
+			Debug.Log (temp + " is the current object in this loop " + i);
             currentInventory.Add(temp);
-            slots.Add(Instantiate(inventorySlot));
+			slots.Add(Instantiate(invSlotToUse));
             slots[i].GetComponent<InventorySlot>().id = i;
             slots[i].transform.SetParent(slotPanel.transform);
+			slots[i].transform.localPosition = new Vector3(vectorOffSet,0,0);
         }
 
-        AddItem(0);
-        AddItem(1);
+//        AddItem(0);
+//        AddItem(1);
     }
 
     public Objects FetchObjectByID(int id) {
@@ -51,17 +59,23 @@ public class InventorySystem : MonoBehaviour
     }
     public void AddItem (int id)
     {
+		
         Objects itemToAdd = FetchObjectByID(id);
         for (int i = 0; i < currentInventory.Count; i++)
         {
             if (currentInventory[i].objectVal.identityNumber == id)
             {
                 currentInventory[i] = itemToAdd;
+				Debug.Log("I'm running AddItem and I am trying to add " + itemToAdd);
                 GameObject itemObj = Instantiate(inventoryItem);
+				Debug.Log("I created an instance of " + inventoryItem);
                 itemObj.GetComponent<ItemData>().item = itemToAdd; // Connects with new script <ItemData>
-                itemObj.GetComponent<ItemData>().slotLocation = i;
+                itemObj.GetComponent<ItemData>().slotLocation = i; 
+
+				Debug.Log("I'm adding an item and then a slow location " + itemObj + " " + itemObj.GetComponent<ItemData>().slotLocation + " " + itemObj.GetComponent<ItemData>().item);
                 itemObj.transform.SetParent(slots[i].transform);
                 itemObj.transform.position = Vector2.zero;
+				Debug.Log (itemObj.transform.position);
                 itemObj.GetComponent<Image>().sprite = itemToAdd.objectVal.itemIcon;
                 itemObj.name = itemToAdd.objectVal.itemName;
                 
