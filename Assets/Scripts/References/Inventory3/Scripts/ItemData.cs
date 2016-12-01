@@ -50,12 +50,12 @@ public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        tooltip.Activate(item);
-    }
+        //tooltip.Activate(item);
+    }	
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        tooltip.Deactivate();
+       // tooltip.Deactivate();
     }
 
     //afterwards under prefab of the item >>layout element [X] check - ignore layout

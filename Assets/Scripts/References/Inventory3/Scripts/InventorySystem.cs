@@ -34,19 +34,20 @@ public class InventorySystem : MonoBehaviour
         for(int i = 0; i < slotAmount; i++)
         {
 			vectorOffSet += 145f;
-			Debug.Log (vectorOffSet);
+			//Debug.Log (vectorOffSet);
 			inventoryItem = currentInventory [i].gameObject;
-            Objects temp = resetObject;
-			Debug.Log (temp + " is the current object in this loop " + i);
-            currentInventory.Add(temp);
+            //Objects temp = resetObject;
+			//Debug.Log (temp + " is the current object in this loop " + i);
+            //currentInventory.Add(temp);
 			slots.Add(Instantiate(invSlotToUse));
             slots[i].GetComponent<InventorySlot>().id = i;
             slots[i].transform.SetParent(slotPanel.transform);
 			slots[i].transform.localPosition = new Vector3(vectorOffSet,0,0);
         }
 
-//        AddItem(0);
-//        AddItem(1);
+		for (int i = 0; i < currentInventory.Count; i++) {
+			AddItem (currentInventory [i].objectVal.identityNumber);
+		}
     }
 
     public Objects FetchObjectByID(int id) {
@@ -59,7 +60,7 @@ public class InventorySystem : MonoBehaviour
     }
     public void AddItem (int id)
     {
-		
+		Debug.Log (id + currentInventory[id].objectVal.identityNumber);
         Objects itemToAdd = FetchObjectByID(id);
         for (int i = 0; i < currentInventory.Count; i++)
         {
@@ -78,6 +79,7 @@ public class InventorySystem : MonoBehaviour
 				Debug.Log (itemObj.transform.position);
                 itemObj.GetComponent<Image>().sprite = itemToAdd.objectVal.itemIcon;
                 itemObj.name = itemToAdd.objectVal.itemName;
+				itemObj.GetComponent<Image> ().rectTransform.localPosition = Vector2.zero;
                 
                 break;
 
