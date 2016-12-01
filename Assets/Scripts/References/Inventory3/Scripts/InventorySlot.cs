@@ -11,6 +11,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler {
 
     void Start()
     {
+		Debug.Log (" Inventory slot initialized as a child of " + gameObject);
         inv = GameObject.Find("Inventory Master").GetComponent<InventorySystem>();
     }
 
