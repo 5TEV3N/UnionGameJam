@@ -1348,8 +1348,6 @@ GameObject:
   - 224: {fileID: 44571422}
   - 222: {fileID: 44571424}
   - 114: {fileID: 44571423}
-  - 114: {fileID: 44571426}
-  - 114: {fileID: 44571425}
   m_Layer: 0
   m_Name: Inventory Panel
   m_TagString: Untagged
@@ -1409,40 +1407,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 44571421}
---- !u!114 &44571425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 44571421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f60e53d58e83c4f05b6c4ed725685c5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventorySlot: {fileID: 0}
-  inventoryItem: {fileID: 0}
-  slotAmount: 0
-  slots: []
-  objectsFullList:
-  - {fileID: 547987320}
-  - {fileID: 1642440567}
-  - {fileID: 976952354}
-  - {fileID: 382940726}
-  currentInventory:
-  - {fileID: 547987320}
-  - {fileID: 1642440567}
---- !u!114 &44571426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 44571421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44cf73425edb24e52857093e6ebea263, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &63123633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,6 +1899,8 @@ MonoBehaviour:
   slots: []
   objectsFullList: []
   currentInventory: []
+  resetObject: {fileID: 114000011592609112, guid: 08052a5ba7fc0184e892aabfe019b21b,
+    type: 2}
 --- !u!43 &120764515
 Mesh:
   m_ObjectHideFlags: 0
@@ -13293,6 +13259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
+  resetterObject: {fileID: 114000011592609112, guid: 08052a5ba7fc0184e892aabfe019b21b,
+    type: 2}
 --- !u!1 &1179741313
 GameObject:
   m_ObjectHideFlags: 0
