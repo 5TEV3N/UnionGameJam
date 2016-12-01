@@ -611,6 +611,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui_EngineState: {fileID: 0}
+  uiStateEngine:
+    currentState: {fileID: 0}
+    nextState: {fileID: 0}
+    stateFullList: []
+    stateHistory: []
+    stateIterationCount: 0
   textToShow: 
   uiTextBoxToUse: {fileID: 0}
   isNarrativeUIShowing: 0
@@ -707,10 +713,22 @@ MonoBehaviour:
   narrativeManager:
     currentNarrativeText: {fileID: 0}
     nextNarrativeText: {fileID: 0}
-    narrativeFullList: []
+    narrativeFullList:
+    - {fileID: 114000011247722564}
+    - {fileID: 114000011018035268}
+    - {fileID: 114000013152542152}
+    - {fileID: 114000013699557904}
+    - {fileID: 114000013527926004}
+    - {fileID: 114000011676260426}
     narrativeSelectionHistory: []
     narrativeIterationCount: 0
   n_EngineState: {fileID: 0}
+  narrativeStateEngine:
+    currentState: {fileID: 0}
+    nextState: {fileID: 0}
+    stateFullList: []
+    stateHistory: []
+    stateIterationCount: 0
   timerTime: 0
   goTimer: 0
 --- !u!114 &114000013152542152
