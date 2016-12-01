@@ -16,16 +16,15 @@ public class PlayerController : MonoBehaviour
     public bool isRunning;
     public bool canRun;
     public float staminaDecay;
-
-    //Health
-    public float healthDecay;
-    public bool isOverTime;
-    public bool isImpulse;
-
+   
 
     //Health
     [Header("Health - Attributes")]
     public BasicAttribute playerHealth = new BasicAttribute();
+    public float healthDecay;
+    public bool isOverTime;
+    public bool isImpulse;
+
 
 
     [Header("Values")]
@@ -227,6 +226,7 @@ public class PlayerController : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.down , floorRayDistance, groundMask))
         {
             rb.AddForce(transform.up * (jumpHeight.baseAttributeCurrent * jumpHeightIntensifier), ForceMode.Impulse);
+
         }
     }
 
