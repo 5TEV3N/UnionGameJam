@@ -44,6 +44,7 @@ public class BasicNarrativeEngine{
 
     //This gets the most salient narrative element in the list, powerful tool can check on layers, or just strongest message overall.
     public NarrativeObject GetHeaviestNarrativeKey(int narrativeLayer = -1, List<NarrativeObject> listToCheck = null) {
+		
         NarrativeObject winningText = null;
         float highestWeight = 0;
         if (listToCheck == null) {
@@ -64,10 +65,13 @@ public class BasicNarrativeEngine{
         }
         else
         {
+			//Debug.Log (" I am starting GetHeaviestNArrative Else condition " + narrativeLayer);
             foreach (NarrativeObject myText in listToCheck)
             {
+				//Debug.Log (" I am doing the loop WHEEE Key " + narrativeLayer);
+				Debug.Log (myText.narrativeObject.narrativeLayer + " vs " + narrativeLayer);
                 if (myText.narrativeObject.narrativeLayer == narrativeLayer)
-                {
+				{ Debug.Log (" I am looking at all of the heavy objects at layer " + narrativeLayer);
                     if (myText.narrativeObject.narrativeWeight < highestWeight)
                     {
                         winningText = myText;

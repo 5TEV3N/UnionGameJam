@@ -7,15 +7,20 @@ public class EnvironmentInteractions : MonoBehaviour {
 	//public bool valueToSet;
 	public GameObject[] mastersList;
 	public GameObject masterToUse;
+	public GameObject uiMaster;
 	public State stateToSet;
 	public Objective objectiveToSet;
+	public int narrativeLayer;
+	public string narrativeKey;
 	public string commandToUse;
 	public bool onTriggerEnter;
 	public bool onTriggerExit;
 	public bool onTriggerStay;
-	//SetObj
+	public bool t4Layerf4Key;
+	//SetObjective
 	//SetState
 	//SetBool
+	//SetNarrativeKey
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +46,9 @@ public class EnvironmentInteractions : MonoBehaviour {
 				case "SetBool":
 					SetBool ();
 					break;
+				case "SetNarrativeKey":
+					DoNarrative ();
+					break;
 				default:
 					break;
 				}
@@ -61,6 +69,9 @@ public class EnvironmentInteractions : MonoBehaviour {
 				case "SetBool":
 					SetBool ();
 					break;
+				case "SetNarrativeKey":
+					DoNarrative ();
+					break;
 				default:
 					break;
 				}
@@ -80,6 +91,9 @@ public class EnvironmentInteractions : MonoBehaviour {
 					break;
 				case "SetBool":
 					SetBool ();
+					break;
+				case "SetNarrativeKey":
+					DoNarrative ();
 					break;
 				default:
 					break;
@@ -110,5 +124,20 @@ public class EnvironmentInteractions : MonoBehaviour {
 	public void SetBool(){
 		Debug.Log("This script doesn't work, thanks for trying!");
 		//valueToSet = true;
+	}
+	public void DoNarrative(){
+		Debug.Log ("Running do Narrative, true = layer, false = key " + t4Layerf4Key);
+		if (t4Layerf4Key == true) {
+			GameObject nm = GameObject.Find ("NarrativeMaster");
+			NarrativeEngine ne = nm.GetComponent<NarrativeEngine> ();
+			BasicNarrativeEngine bse = ne.narrativeManager;
+			NarrativeObject bst = bse.GetHeaviestNarrativeKey (narrativeLayer);
+			Debug.Log (bst);
+			string tts = bst.narrativeObject.keyValue;
+			//string textToShow= GameObject.Find("NarrativeMaster").GetComponent<NarrativeEngine> ().narrativeManager.GetHeaviestNarrativeKey (narrativeLayer).narrativeObject.keyValue;
+			uiMaster.GetComponent<UIEngine> ().DisplayNarrativeText (tts);
+		} else {
+		
+		}
 	}
 }
