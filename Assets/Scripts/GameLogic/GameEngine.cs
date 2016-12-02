@@ -77,13 +77,15 @@ public class GameEngine : MonoBehaviour {
 		//Objective 4 Feel the scrap book
 		if (gameObjectiveEngine.objectiveFullList[5] == gameObjectiveEngine.currentObjective) {
 			uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (13).narrativeObject.keyValue);
-
+			GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = false;
+			GameObject.Find ("NOScrapBook").GetComponent<Renderer>().enabled = false;
 			GameObject.Find ("TZOM15").SetActive (true);
 
 		}
 		//Objective 5 Give it to Old Man
 		if (gameObjectiveEngine.objectiveFullList[6] == gameObjectiveEngine.currentObjective) {
 			uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (14).narrativeObject.keyValue);
+			GameObject.Find ("NOScrapBook").SetActive (false);
 			GameObject.Find ("TZOM14").GetComponent<BoxCollider>().enabled = false;
 			GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = false;
 
