@@ -1844,8 +1844,6 @@ MonoBehaviour:
   currentInventory:
   - {fileID: 547987320}
   - {fileID: 1642440567}
-  - {fileID: 976952354}
-  - {fileID: 382940726}
   resetObject: {fileID: 114000011592609112, guid: 08052a5ba7fc0184e892aabfe019b21b,
     type: 2}
 --- !u!114 &112616661
@@ -5680,7 +5678,9 @@ MonoBehaviour:
     baseAttributeAdjustAmount: 0
   healthDecay: 0.25
   isOverTime: 0
-  isImpulse: 1
+  isImpulse: 0
+  jumpCount: 2
+  candoublejump: 1
   mouseSensitivity: 1
   jumpHeightIntensifier: 8
   playerSpeedIntensifier: 50
@@ -5691,6 +5691,7 @@ MonoBehaviour:
   floorRayDistance: 1.9
   isJumping: 0
   rb: {fileID: 431352862}
+  heldItemLocation: {fileID: 0}
   cam: {fileID: 2009473143}
   groundMask:
     serializedVersion: 2
@@ -5698,6 +5699,8 @@ MonoBehaviour:
   interactableMask:
     serializedVersion: 2
     m_Bits: 2048
+  grounded: 1
+  jumpkeydown: 0
 --- !u!114 &431352864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29753,7 +29756,7 @@ Prefab:
     - target: {fileID: 224000011385548654, guid: 722b58d66eb86447f9abffd5de542f17,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224000011385548654, guid: 722b58d66eb86447f9abffd5de542f17,
         type: 2}

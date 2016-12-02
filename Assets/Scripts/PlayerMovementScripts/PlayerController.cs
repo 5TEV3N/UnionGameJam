@@ -10,14 +10,14 @@ public class PlayerController : MonoBehaviour
     public ObjectsInteractions gameObjectHighlight = new ObjectsInteractions();
     public ObjectsInteractions highlightThis = new ObjectsInteractions();
     public ObjectsInteractions equipThis = new ObjectsInteractions();
-    
+
     //Stamina
     [Header("Stamina - Attributes")]
     public BasicAttribute playerStamina = new BasicAttribute();
     public bool isRunning;
     public bool canRun;
     public float staminaDecay;
-   
+
 
     //Health
     [Header("Health - Attributes")]
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     //Jump
     public int jumpCount = 1;
+    public bool candoublejump;
 
 
 
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
 
     public bool isJumping;                                           // Checks if you are grounded or not
 
-    [Header ("Containers")]
+    [Header("Containers")]
     public Rigidbody rb;                                             // Access the rigidbody to move
     public Transform heldItemLocation;
     public Camera cam;                                               // Acess the Camera of the gameobject
@@ -63,7 +64,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 startMarker;                                     // Declaring a container for the start position for the ray	
 
     void Awake()
-    {   
+    {
         inputManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InputManager>();
         originalMaxVelocity = maxVelocity;
 
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
         myRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         Debug.DrawRay(startMarker, myRay.direction * camRayDistance, Color.magenta);
 
-        if(Physics.Raycast(myRay, out myHit, camRayDistance, interactableMask)) // Must fix !!
+        if (Physics.Raycast(myRay, out myHit, camRayDistance, interactableMask)) // Must fix !!
         {
             GameObject interactableObject = myHit.transform.gameObject;
             highlightThis.isHighlighted = true;
@@ -103,7 +104,8 @@ public class PlayerController : MonoBehaviour
         jumpingRay = new Ray(gameObject.transform.position, Vector3.down);
 
         //Reduce stamina here
-        if (isRunning == true) {
+        if (isRunning == true)
+        {
             ReduceStamina();
         }
         if (isRunning == false)
@@ -112,6 +114,12 @@ public class PlayerController : MonoBehaviour
         }
 
         //Jump Attribute
+        if (jumpCount > 3 || grounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(transform.up * (jumpHeight.baseAttributeCurrent * jumpHeightIntensifier), ForceMode.Impulse);
+            grounded = false;
+            jumpCount += 1;
+        }
 
     }
 
@@ -120,7 +128,7 @@ public class PlayerController : MonoBehaviour
         //Filter Horizontal input
         if (mouseXAxis != 0)
         {
-            gameObject.transform.Rotate(new Vector3(0, mouseXAxis, 0));      
+            gameObject.transform.Rotate(new Vector3(0, mouseXAxis, 0));
         }
 
         //Filter Vertical input
@@ -128,8 +136,8 @@ public class PlayerController : MonoBehaviour
         {
             verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;               //This section pretty much clamps your camera rotation
             verticalRotation = Mathf.Clamp(verticalRotation, -upDownRange, upDownRange);
-            cam.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);        
-        } 
+            cam.transform.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
+        }
     }
 
     public void PlayerMove(float xAxis, float zAxis)
@@ -141,7 +149,7 @@ public class PlayerController : MonoBehaviour
                 if (valOfVelocity <= maxVelocity)
                 {
                     rb.AddForce(transform.right * (playerSpeed.baseAttributeCurrent * playerSpeedIntensifier));
-                }   
+                }
             }
 
             if (xAxis < 0)
@@ -175,17 +183,18 @@ public class PlayerController : MonoBehaviour
 
     public void Sprint()
     {
-       
+
         if (canRun == true && (playerStamina.baseAttributeCurrent > 0))
-        { 
-           
+        {
+
             isRunning = true;
             maxVelocity = originalMaxVelocity + 2; // main code
-            
+
         }
     }
 
-    public void ReduceStamina() {
+    public void ReduceStamina()
+    {
         //Debug.Log(staminaDecay + "before transformation");
         float tempStaminaDecay = Mathf.Clamp01((staminaDecay * Time.deltaTime));
         //Debug.Log(staminaDecay + "after");
@@ -204,7 +213,8 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log(playerHealth.baseAttributeCurrent + "before transformation");
         float temphealthDecay = 0;
-        if (isOverTime == true) {
+        if (isOverTime == true)
+        {
             temphealthDecay = Mathf.Clamp01((healthDecay * Time.deltaTime));
             Debug.Log(healthDecay);
         }
@@ -212,8 +222,8 @@ public class PlayerController : MonoBehaviour
         {
             temphealthDecay = healthDecay;
         }
-        
-        
+
+
         playerHealth.AdjustAttribute("SubtractAmount", temphealthDecay);
         Debug.Log(playerHealth.baseAttributeCurrent + "after");
     }
@@ -233,14 +243,38 @@ public class PlayerController : MonoBehaviour
     }
 
     //Jump
-    bool grounded = false;
+    public bool grounded = false;
+    public bool jumpkeydown;
+
     public void Jump()
     {
-        if (Physics.Raycast(transform.position, Vector3.down , floorRayDistance, groundMask))
+        if (Physics.Raycast(transform.position, Vector3.down, floorRayDistance, groundMask))
         {
             rb.AddForce(transform.up * (jumpHeight.baseAttributeCurrent * jumpHeightIntensifier), ForceMode.Impulse);
+     }
 
+        if (jumpkeydown)
+        {
+            if (grounded)
+            {
+                rb.velocity = new Vector3(rb.velocity.x, 0);
+                rb.AddForce(transform.up * (jumpHeight.baseAttributeCurrent * jumpHeightIntensifier), ForceMode.Impulse);
+                candoublejump = true;
+                Debug.Log("Jumpinggg");
+
+            }
+            else
+            {
+                Debug.Log("Trying to jump");
+                if (candoublejump)
+                {
+                    Debug.Log("Totally Double Jumping rn");
+                    candoublejump = false;
+                    rb.velocity = new Vector3(rb.velocity.x, 0);
+                    rb.AddForce(transform.up * (jumpHeight.baseAttributeCurrent * jumpHeightIntensifier), ForceMode.Impulse);
+                }
+            }
         }
-    }
 
+    }
 }
