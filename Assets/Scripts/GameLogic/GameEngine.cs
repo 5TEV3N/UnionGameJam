@@ -46,6 +46,9 @@ public class GameEngine : MonoBehaviour {
 				WinGame ();
 
 			}
+			if(GameObject.FindWithTag("Player").GetComponent<PlayerController>().playerHealth.baseAttributeCurrent <= 0){
+				LoseGame ();
+			}
 			if (gameObjectiveEngine.objectiveFullList[1] == gameObjectiveEngine.currentObjective) {
 				//uiEngine.DisplayNarrativeText (gameObjectiveEngine.currentObjective.thisObjective.objectiveMessage);
 
