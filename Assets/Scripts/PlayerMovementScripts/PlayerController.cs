@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     public bool isOverTime;
     public bool isImpulse;
 
+    //Jump
+    public int jumpCount = 1;
+
+
 
 
     [Header("Values")]
@@ -106,6 +110,9 @@ public class PlayerController : MonoBehaviour
         {
             IncreaseStamina();
         }
+
+        //Jump Attribute
+
     }
 
     public void Mouselook(float mouseXAxis, float mouseYAxis)
@@ -225,6 +232,8 @@ public class PlayerController : MonoBehaviour
         maxVelocity = originalMaxVelocity;
     }
 
+    //Jump
+    bool grounded = false;
     public void Jump()
     {
         if (Physics.Raycast(transform.position, Vector3.down , floorRayDistance, groundMask))
