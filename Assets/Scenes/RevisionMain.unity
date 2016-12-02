@@ -2756,8 +2756,6 @@ MonoBehaviour:
   healthDecay: 0
   isOverTime: 0
   isImpulse: 0
-  jumpCount: 1
-  candoublejump: 0
   mouseSensitivity: 1
   jumpHeightIntensifier: 8
   playerSpeedIntensifier: 50
@@ -2776,8 +2774,6 @@ MonoBehaviour:
   interactableMask:
     serializedVersion: 2
     m_Bits: 2048
-  grounded: 0
-  jumpkeydown: 0
 --- !u!114 &431352864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3685,15 +3681,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010075039442, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7.667576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010075039442, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.945437
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010075039442, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.0130672
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010075039442, guid: 3dd775877a481544f93178df4e483e5d, type: 2}
       propertyPath: m_LocalRotation.x
