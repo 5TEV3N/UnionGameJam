@@ -13,6 +13,7 @@ public class ObjectsInteractions
 
 
     public BasicItem gameItem = new BasicItem();
+    public Spawner spawnobject = new Spawner();
 
     public void HighlightOnHover(GameObject p_thisGameObject, Renderer p_interactableObjRender, Color p_objOriginalColor, bool p_higlighted)
     {
@@ -51,20 +52,9 @@ public class ObjectsInteractions
         // Instantiate the object in this position
         objectInstance = p_instance;
         objectPosition = p_position;
-        gameItem.isHeld = true;
-
-        if (gameItem.isHeld == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                gameItem.isHeld = false;
-
-                LeaveObject(objectInstance, objectPosition);
-            }
-        }
-
+        spawnobject.SpawnObjectAtSpot(objectPosition, objectInstance);
     }
-    
+    /*
     public void LeaveObject(GameObject p_droppedInstance, Transform p_doppedPosition)
     {
         p_droppedInstance = GameObject.Instantiate(p_droppedInstance, p_doppedPosition) as GameObject;
@@ -72,5 +62,5 @@ public class ObjectsInteractions
 
         gameItem.isDropped = true;
     }
-
+    */
 }

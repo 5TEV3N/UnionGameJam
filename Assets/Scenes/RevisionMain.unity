@@ -2748,14 +2748,16 @@ MonoBehaviour:
   isRunning: 0
   canRun: 1
   staminaDecay: 0.25
-  healthDecay: 0
-  isOverTime: 0
-  isImpulse: 0
   playerHealth:
     baseAttributeMin: 0
     baseAttributeMax: 1
     baseAttributeCurrent: 0
     baseAttributeAdjustAmount: 0
+  healthDecay: 0
+  isOverTime: 0
+  isImpulse: 0
+  jumpCount: 1
+  candoublejump: 0
   mouseSensitivity: 1
   jumpHeightIntensifier: 8
   playerSpeedIntensifier: 50
@@ -2766,7 +2768,7 @@ MonoBehaviour:
   floorRayDistance: 1.9
   isJumping: 0
   rb: {fileID: 431352862}
-  heldItemLocation: {fileID: 0}
+  heldItemLocation: {fileID: 2128484566}
   cam: {fileID: 2009473143}
   groundMask:
     serializedVersion: 2
@@ -2774,6 +2776,8 @@ MonoBehaviour:
   interactableMask:
     serializedVersion: 2
     m_Bits: 2048
+  grounded: 0
+  jumpkeydown: 0
 --- !u!114 &431352864
 MonoBehaviour:
   m_ObjectHideFlags: 0
