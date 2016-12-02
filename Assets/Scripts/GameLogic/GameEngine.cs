@@ -39,60 +39,73 @@ public class GameEngine : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//FirstObjective
-		if (gameObjectiveEngine.objectiveFullList[0] == gameObjectiveEngine.currentObjective) {
-			//uiEngine.DisplayNarrativeText (gameObjectiveEngine.currentObjective.thisObjective.objectiveMessage);
+		//Start Win/Lose
+			if (gameObjectiveEngine.objectiveFullList[0] == gameObjectiveEngine.currentObjective) {
+				//uiEngine.DisplayNarrativeText (gameObjectiveEngine.currentObjective.thisObjective.objectiveMessage);
 
-			WinGame ();
+				WinGame ();
 
-		}
-		if (gameObjectiveEngine.objectiveFullList[1] == gameObjectiveEngine.currentObjective) {
-			//uiEngine.DisplayNarrativeText (gameObjectiveEngine.currentObjective.thisObjective.objectiveMessage);
+			}
+			if (gameObjectiveEngine.objectiveFullList[1] == gameObjectiveEngine.currentObjective) {
+				//uiEngine.DisplayNarrativeText (gameObjectiveEngine.currentObjective.thisObjective.objectiveMessage);
 
-			LoseGame ();
-		}
+				LoseGame ();
+			}
+		//End Win/Lose
 
-		//Objective 1 Enter house
-		if (gameObjectiveEngine.objectiveFullList[2] == gameObjectiveEngine.currentObjective) {
-			uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (10).narrativeObject.keyValue);
-
-
-		}
-		//Objective 2 See Old Man
-		if (gameObjectiveEngine.objectiveFullList[3] == gameObjectiveEngine.currentObjective) {
-			uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (11).narrativeObject.keyValue);
-
-			GameObject.Find ("TZOM11").GetComponent<BoxCollider>().enabled = false;
-			GameObject.Find ("TZOM13").GetComponent<BoxCollider>().enabled = true;
-
-		}
-		//Objective 3 Get ScrapBook
-		if (gameObjectiveEngine.objectiveFullList[4] == gameObjectiveEngine.currentObjective) {
-			uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (12).narrativeObject.keyValue);
-			GameObject.Find ("TZOM13").GetComponent<BoxCollider>().enabled = false;
-			GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = true;
-			GameObject.Find ("TZOM14").GetComponent<BoxCollider>().enabled = true;
-
-		}
-		//Objective 4 Feel the scrap book
-		if (gameObjectiveEngine.objectiveFullList[5] == gameObjectiveEngine.currentObjective) {
-			uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (13).narrativeObject.keyValue);
-			GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = false;
-			GameObject.Find ("NOScrapBook").GetComponent<Renderer>().enabled = false;
-			GameObject.Find ("TZOM15").SetActive (true);
-
-		}
-		//Objective 5 Give it to Old Man
-		if (gameObjectiveEngine.objectiveFullList[6] == gameObjectiveEngine.currentObjective) {
-			uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (14).narrativeObject.keyValue);
-			GameObject.Find ("NOScrapBook").SetActive (false);
-			GameObject.Find ("TZOM14").GetComponent<BoxCollider>().enabled = false;
-			GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = false;
+		//Start Objective Progresses
+			//Objective 1 Enter house
+			if (gameObjectiveEngine.objectiveFullList[2] == gameObjectiveEngine.currentObjective) {
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (10).narrativeObject.keyValue);
 
 
-		}
+			}
+			//Objective 2 See Old Man
+			if (gameObjectiveEngine.objectiveFullList[3] == gameObjectiveEngine.currentObjective) {
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (11).narrativeObject.keyValue);
 
-	
+				GameObject.Find ("TZOM11").GetComponent<BoxCollider>().enabled = false;
+				GameObject.Find ("TZOM13").GetComponent<BoxCollider>().enabled = true;
+
+			}
+			//Objective 3 Get ScrapBook
+			if (gameObjectiveEngine.objectiveFullList[4] == gameObjectiveEngine.currentObjective) {
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (12).narrativeObject.keyValue);
+				GameObject.Find ("TZOM13").GetComponent<BoxCollider>().enabled = false;
+				GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = true;
+				GameObject.Find ("TZOM14").GetComponent<BoxCollider>().enabled = true;
+
+			}
+			//Objective 4 Feel the scrap book
+			if (gameObjectiveEngine.objectiveFullList[5] == gameObjectiveEngine.currentObjective) {
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (13).narrativeObject.keyValue);
+				GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = false;
+				GameObject.Find ("NOScrapBook").GetComponent<Renderer>().enabled = false;
+				GameObject.Find ("TZOM15").SetActive (true);
+
+			}
+			//Objective 5 Give it to Old Man
+			if (gameObjectiveEngine.objectiveFullList[6] == gameObjectiveEngine.currentObjective) {
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (14).narrativeObject.keyValue);
+				GameObject.Find ("NOScrapBook").SetActive (false);
+				GameObject.Find ("TZOM14").GetComponent<BoxCollider>().enabled = false;
+				GameObject.Find ("TZOM14").GetComponent<Renderer>().enabled = false;
+
+
+			}
+		//End Objective Progresses
+		//Start State Conditions
+			if (gameStateEngine.stateFullList[0] == gameStateEngine.currentState){
+				GameObject.Find ("Lvl1cube").GetComponent<Renderer>().enabled = true;
+				
+
+			}
+			if (gameStateEngine.stateFullList[1] == gameStateEngine.currentState){
+				GameObject.Find ("Lvl2cube").GetComponent<Renderer>().enabled = true;
+				GameObject.Find ("Lvl1cube").GetComponent<Renderer>().enabled = false;
+			}
+			
+		//EndStateConditions
 
 	}
 
