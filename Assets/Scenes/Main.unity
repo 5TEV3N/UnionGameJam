@@ -1987,7 +1987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &112616659
 Transform:
   m_ObjectHideFlags: 0
@@ -2025,8 +2025,6 @@ MonoBehaviour:
   currentInventory:
   - {fileID: 547987320}
   - {fileID: 1642440567}
-  - {fileID: 976952354}
-  - {fileID: 382940726}
   resetObject: {fileID: 114000011592609112, guid: 08052a5ba7fc0184e892aabfe019b21b,
     type: 2}
 --- !u!114 &112616661
@@ -11081,6 +11079,7 @@ Transform:
   - {fileID: 1394154890}
   - {fileID: 418578831}
   - {fileID: 231946927}
+  - {fileID: 1506622195}
   m_Father: {fileID: 982356306}
   m_RootOrder: 1
 --- !u!1 &947024347
@@ -17579,7 +17578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010866965738, guid: 84ebc2f77a1934d579f02a5b5fbc2f8e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000010866965738, guid: 84ebc2f77a1934d579f02a5b5fbc2f8e, type: 2}
       propertyPath: m_Layer
@@ -18972,6 +18971,7 @@ MonoBehaviour:
     - {fileID: 1897980727}
     - {fileID: 418578832}
     - {fileID: 231946928}
+    - {fileID: 1506622194}
     narrativeSelectionHistory: []
     narrativeIterationCount: 0
   narrativeStateEngine:
@@ -19948,6 +19948,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 947024353}
   m_RootOrder: 20
+--- !u!1 &1506622193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011415032852, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1506622195}
+  - 114: {fileID: 1506622194}
+  m_Layer: 0
+  m_Name: OldManText22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506622194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114000013152542152, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506622193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa077e4dbfb7d4effa0413dc74b6bf56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeObject:
+    keyName: OMT22
+    keyValue: Get me the scrapbook, fool.
+    associatedTags: []
+    narrativeWeight: 150
+    narrativeLayer: 12
+--- !u!4 &1506622195
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012269278486, guid: 3dd775877a481544f93178df4e483e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506622193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 932932613}
+  m_RootOrder: 8
 --- !u!1 &1516501233
 GameObject:
   m_ObjectHideFlags: 0
