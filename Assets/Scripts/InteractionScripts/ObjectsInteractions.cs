@@ -27,12 +27,13 @@ public class ObjectsInteractions
         if (p_higlighted == true)
         {
             interactableObjRender.material.color = orginalColor + new Color32(200, 200, 200, 1);
+            //interactableObjRender.material.color = Color.blue;
         }
 
         if (p_higlighted == false)
         {
-            //interactableObjRender.material.color = orginalColor;
-            interactableObjRender.material.color = Color.blue;
+            interactableObjRender.material.color = orginalColor - new Color32(200, 200, 200, 1);
+            //interactableObjRender.material.color = Color.blue;
             Debug.Log("asdf");
         }
     }
