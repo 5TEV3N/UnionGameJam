@@ -82,8 +82,7 @@ public class PlayerController : MonoBehaviour
         if(Physics.Raycast(myRay, out myHit, camRayDistance, interactableMask))                      
         {
             GameObject interactableObject = myHit.transform.gameObject;                              // information of the hit is stored into interactableObject
-            Renderer intractableObjectRenderer = myHit.transform.GetComponent<Renderer>();
-            //highlightThis.interactableObjRender = myHit.transform.GetComponent<Renderer>();          // Stores the renderer
+            highlightThis.interactableObjRender = myHit.transform.GetComponent<Renderer>();          // Stores the renderer
 
             if (currentHighlightObject != interactableObject)
             {
