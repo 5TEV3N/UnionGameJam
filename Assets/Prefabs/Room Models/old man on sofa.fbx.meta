@@ -1,0 +1,237 @@
+fileFormatVersion: 2
+guid: 1dacaecbbce2ce24a841ad22af61ec4f
+timeCreated: 1480796640
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: FamilyBox_rigging_Wife:Base
+    100002: FamilyBox_rigging_Wife:Chest
+    100004: FamilyBox_rigging_Wife:group
+    100006: FamilyBox_rigging_Wife:Head
+    100008: FamilyBox_rigging_Wife:L_arm_elbow
+    100010: FamilyBox_rigging_Wife:L_arm_hand
+    100012: FamilyBox_rigging_Wife:L_arm_shoulder
+    100014: FamilyBox_rigging_Wife:L_leg_foot
+    100016: FamilyBox_rigging_Wife:L_leg_hip
+    100018: FamilyBox_rigging_Wife:L_leg_knee
+    100020: FamilyBox_rigging_Wife:LanceKnight_BLUE
+    100022: FamilyBox_rigging_Wife:LanceKnight_BLUE1
+    100024: FamilyBox_rigging_Wife:LanceKnight_BLUE2
+    100026: FamilyBox_rigging_Wife:LanceKnight_BLUE3
+    100028: FamilyBox_rigging_Wife:LanceKnight_BLUE4
+    100030: FamilyBox_rigging_Wife:pasted__pCube2
+    100032: FamilyBox_rigging_Wife:pasted__pCube3
+    100034: FamilyBox_rigging_Wife:pasted__pCube4
+    100036: FamilyBox_rigging_Wife:pasted__pCube5
+    100038: FamilyBox_rigging_Wife:pasted__polySurface4
+    100040: FamilyBox_rigging_Wife:pCube1
+    100042: FamilyBox_rigging_Wife:polySurface1
+    100044: FamilyBox_rigging_Wife:polySurface2
+    100046: FamilyBox_rigging_Wife:polySurface3
+    100048: FamilyBox_rigging_Wife:polySurface4
+    100050: FamilyBox_rigging_Wife:polySurface4 1
+    100052: FamilyBox_rigging_Wife:polySurface5
+    100054: FamilyBox_rigging_Wife:polySurface6
+    100056: FamilyBox_rigging_Wife:R_arm_elbow
+    100058: FamilyBox_rigging_Wife:R_arm_hand
+    100060: FamilyBox_rigging_Wife:R_arm_shoulder
+    100062: FamilyBox_rigging_Wife:R_leg_foot
+    100064: FamilyBox_rigging_Wife:R_leg_hip
+    100066: FamilyBox_rigging_Wife:R_leg_knee
+    100068: FamilyBox_rigging_Wife:Stomach
+    100070: FamilyBox_rigging_Wife:transform1
+    100072: FamilyBox_rigging_Wife:transform10
+    100074: FamilyBox_rigging_Wife:transform11
+    100076: FamilyBox_rigging_Wife:transform2
+    100078: FamilyBox_rigging_Wife:transform3
+    100080: FamilyBox_rigging_Wife:transform4
+    100082: FamilyBox_rigging_Wife:transform5
+    100084: FamilyBox_rigging_Wife:transform6
+    100086: FamilyBox_rigging_Wife:transform7
+    100088: FamilyBox_rigging_Wife:transform8
+    100090: FamilyBox_rigging_Wife:transform9
+    100092: group1
+    100094: group2
+    100096: //RootNode
+    100098: polySurface1
+    100100: polySurface10
+    100102: polySurface10 1
+    100104: polySurface11
+    100106: polySurface2
+    100108: polySurface3
+    100110: polySurface4
+    100112: polySurface5
+    100114: polySurface6
+    100116: polySurface7
+    100118: polySurface8
+    100120: polySurface9
+    100122: Sofa.1
+    100124: transform1
+    100126: transform10
+    100128: transform11
+    100130: transform12
+    100132: transform13
+    100134: transform14
+    100136: transform15
+    100138: transform16
+    100140: transform17
+    100142: transform18
+    100144: transform19
+    100146: transform2
+    100148: transform3
+    100150: transform4
+    100152: transform5
+    100154: transform6
+    100156: transform7
+    100158: transform8
+    100160: transform9
+    400000: FamilyBox_rigging_Wife:Base
+    400002: FamilyBox_rigging_Wife:Chest
+    400004: FamilyBox_rigging_Wife:group
+    400006: FamilyBox_rigging_Wife:Head
+    400008: FamilyBox_rigging_Wife:L_arm_elbow
+    400010: FamilyBox_rigging_Wife:L_arm_hand
+    400012: FamilyBox_rigging_Wife:L_arm_shoulder
+    400014: FamilyBox_rigging_Wife:L_leg_foot
+    400016: FamilyBox_rigging_Wife:L_leg_hip
+    400018: FamilyBox_rigging_Wife:L_leg_knee
+    400020: FamilyBox_rigging_Wife:LanceKnight_BLUE
+    400022: FamilyBox_rigging_Wife:LanceKnight_BLUE1
+    400024: FamilyBox_rigging_Wife:LanceKnight_BLUE2
+    400026: FamilyBox_rigging_Wife:LanceKnight_BLUE3
+    400028: FamilyBox_rigging_Wife:LanceKnight_BLUE4
+    400030: FamilyBox_rigging_Wife:pasted__pCube2
+    400032: FamilyBox_rigging_Wife:pasted__pCube3
+    400034: FamilyBox_rigging_Wife:pasted__pCube4
+    400036: FamilyBox_rigging_Wife:pasted__pCube5
+    400038: FamilyBox_rigging_Wife:pasted__polySurface4
+    400040: FamilyBox_rigging_Wife:pCube1
+    400042: FamilyBox_rigging_Wife:polySurface1
+    400044: FamilyBox_rigging_Wife:polySurface2
+    400046: FamilyBox_rigging_Wife:polySurface3
+    400048: FamilyBox_rigging_Wife:polySurface4
+    400050: FamilyBox_rigging_Wife:polySurface4 1
+    400052: FamilyBox_rigging_Wife:polySurface5
+    400054: FamilyBox_rigging_Wife:polySurface6
+    400056: FamilyBox_rigging_Wife:R_arm_elbow
+    400058: FamilyBox_rigging_Wife:R_arm_hand
+    400060: FamilyBox_rigging_Wife:R_arm_shoulder
+    400062: FamilyBox_rigging_Wife:R_leg_foot
+    400064: FamilyBox_rigging_Wife:R_leg_hip
+    400066: FamilyBox_rigging_Wife:R_leg_knee
+    400068: FamilyBox_rigging_Wife:Stomach
+    400070: FamilyBox_rigging_Wife:transform1
+    400072: FamilyBox_rigging_Wife:transform10
+    400074: FamilyBox_rigging_Wife:transform11
+    400076: FamilyBox_rigging_Wife:transform2
+    400078: FamilyBox_rigging_Wife:transform3
+    400080: FamilyBox_rigging_Wife:transform4
+    400082: FamilyBox_rigging_Wife:transform5
+    400084: FamilyBox_rigging_Wife:transform6
+    400086: FamilyBox_rigging_Wife:transform7
+    400088: FamilyBox_rigging_Wife:transform8
+    400090: FamilyBox_rigging_Wife:transform9
+    400092: group1
+    400094: group2
+    400096: //RootNode
+    400098: polySurface1
+    400100: polySurface10
+    400102: polySurface10 1
+    400104: polySurface11
+    400106: polySurface2
+    400108: polySurface3
+    400110: polySurface4
+    400112: polySurface5
+    400114: polySurface6
+    400116: polySurface7
+    400118: polySurface8
+    400120: polySurface9
+    400122: Sofa.1
+    400124: transform1
+    400126: transform10
+    400128: transform11
+    400130: transform12
+    400132: transform13
+    400134: transform14
+    400136: transform15
+    400138: transform16
+    400140: transform17
+    400142: transform18
+    400144: transform19
+    400146: transform2
+    400148: transform3
+    400150: transform4
+    400152: transform5
+    400154: transform6
+    400156: transform7
+    400158: transform8
+    400160: transform9
+    2300000: Sofa.1
+    3300000: Sofa.1
+    4300000: Sofa.1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
