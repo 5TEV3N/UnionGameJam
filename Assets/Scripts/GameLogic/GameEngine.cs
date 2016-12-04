@@ -100,13 +100,8 @@ public class GameEngine : MonoBehaviour {
 		//End Objective Progresses
 		//Start State Conditions
 			if (gameStateEngine.stateFullList[0] == gameStateEngine.currentState){
-				GameObject.Find ("Lvl1cube").GetComponent<Renderer>().enabled = true;
-				
-
 			}
 			if (gameStateEngine.stateFullList[1] == gameStateEngine.currentState){
-				GameObject.Find ("Lvl2cube").GetComponent<Renderer>().enabled = true;
-				GameObject.Find ("Lvl1cube").GetComponent<Renderer>().enabled = false;
 			}
 			
 		//EndStateConditions
