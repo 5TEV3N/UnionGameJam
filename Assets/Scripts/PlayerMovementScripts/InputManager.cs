@@ -64,10 +64,11 @@ public class InputManager : MonoBehaviour
         {
             playerController.StopSprinting();
         }
-
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerController.Jump();
         }
+        */
     }
 }
