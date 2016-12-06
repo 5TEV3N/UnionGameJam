@@ -609,11 +609,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You are approaching  the house of an Old Man off in the suburbs.\r\n\rHe
+  m_Text: "You are approaching the house of an Old Man off in the suburbs.\r\n\rHe
     has borrowed money from your father, Bodge Donahue, and you know that if you don't
-    collect it today, your dad risks losing your family's home.\n\rIt has taken a
-    lot of time and patience, all while sleuthing behind your father's back. Now the
-    Old Man waits in his study, resentful, bitter.\nAlone"
+    collect it today, your father risks losing your family's home.\n\rIt has taken
+    a lot of time and patience, all while sleuthing behind your father's back. Now
+    the Old Man waits in his house, resentful, bitter.\nAlone"
 --- !u!222 &1958955013
 CanvasRenderer:
   m_ObjectHideFlags: 0

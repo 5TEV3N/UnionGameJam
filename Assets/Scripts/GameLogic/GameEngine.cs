@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameEngine : MonoBehaviour {
@@ -9,10 +10,16 @@ public class GameEngine : MonoBehaviour {
 	public UIEngine uiEngine;
 	public NarrativeEngine narrativeEngine;
 	public GameObject[] listOfTriggers;
+    private BasicTimer objectiveTimer;
+    private BasicTimer transitionTimer;
+    private bool timerStarted = false;
+    public float timeForObjective;
+    private bool transitionTimerStarted = false;
 
 	//For the switching
 	public bool switchNarrative;
 	private Objective objectiveSwitchChecker;
+    private bool setBadEnding = false;
 
 	//public 
 
@@ -20,24 +27,26 @@ public class GameEngine : MonoBehaviour {
 	void Start () {
 		uiEngine = GameObject.Find ("UIMaster").GetComponent<UIEngine> ();
 		narrativeEngine = GameObject.Find ("NarrativeMaster").GetComponent<NarrativeEngine> ();
-
+        objectiveTimer = new BasicTimer(0);
+        transitionTimer = new BasicTimer(0);
     }
 	void WinGame(){
-		
-		string winMessage = narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (3).narrativeObject.keyValue;
 
-		uiEngine.DisplayNarrativeText (winMessage);
-		Time.timeScale = 0;
+        //string winMessage = narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (3).narrativeObject.keyValue;
 
-	}
+        //uiEngine.DisplayNarrativeText (winMessage);
+        //Time.timeScale = 0;
+        SceneManager.LoadScene(2);
+    }
 
 	void LoseGame(){
-		string loseMessage = narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (4).narrativeObject.keyValue;
+        SceneManager.LoadScene(3);
+        //string loseMessage = narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (4).narrativeObject.keyValue;
 
-		uiEngine.DisplayNarrativeText (loseMessage);
-		Time.timeScale = 0;
-	
-	}
+        //uiEngine.DisplayNarrativeText (loseMessage);
+        //Time.timeScale = 0;
+
+    }
 
 	void NarrativeSwitchOff(){
 		objectiveSwitchChecker = gameObjectiveEngine.currentObjective;
@@ -63,12 +72,44 @@ public class GameEngine : MonoBehaviour {
 
 				LoseGame ();
 			}
-		//End Win/Lose
+        //End Win/Lose
 
 
-		//Start Objective Progresses
-			
-		if (objectiveSwitchChecker != gameObjectiveEngine.currentObjective){
+        //Start Objective Progresses
+
+        //Condition for Objective WalkAround
+            if ((objectiveTimer.TimerIsDone() && timerStarted) || ((gameObjectiveEngine.currentObjective == gameObjectiveEngine.objectiveFullList[7]) && (GameObject.Find("TZOMLVL8Flowers2").GetComponent<EnvironmentTextAfterTime>().enabled == false) && (GameObject.Find("TZOMLVL8Military2").GetComponent<EnvironmentTextAfterTime>().enabled == false))){
+
+                if (transitionTimerStarted == false)
+                {
+                    transitionTimer.ResetTimer(15f);
+                    transitionTimerStarted = true;
+                }
+            
+                if (transitionTimerStarted == true && transitionTimer.TimerIsDone()) {
+                    gameObjectiveEngine.SetObjective(gameObjectiveEngine.objectiveFullList[8]);
+                    timerStarted = false;
+                
+                }
+            
+            }
+
+        //Condition for Objective CollectDebtOrLeave
+        if (setBadEnding == false)
+        {
+            if (GameObject.Find("TZOMLVL9OldMan2").GetComponent<EnvironmentInteractions>().enabled == false)
+            {
+                GameObject.Find("TZOMLVL9ExitDoorB").GetComponent<EnvironmentInteractions>().enabled = true;
+                GameObject.Find("ring").SetActive(false);
+                GameObject.Find("RingBox").SetActive(false);
+                GameObject.Find("RingBoxA").SetActive(false);
+                GameObject.Find("TZOMLVL9ExitDoorA").SetActive(false);
+                setBadEnding = true;
+            }
+        }
+
+        //Objective Switcher
+        if (objectiveSwitchChecker != gameObjectiveEngine.currentObjective){
 			switchNarrative = true;
 		}
 		if (switchNarrative == true) {
@@ -145,19 +186,27 @@ public class GameEngine : MonoBehaviour {
                 {
                     myArray[i].enabled = true;
                 }
-
+                objectiveTimer.ResetTimer(timeForObjective);
+                timerStarted = true;
 
 
             }
+            //CollectDebt
+
 			if (gameObjectiveEngine.objectiveFullList [8] == gameObjectiveEngine.currentObjective) {
-				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey ().narrativeObject.keyValue);
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (36).narrativeObject.keyValue);
+                //Cleanup
+                GameObject.Find("TZOMLVL8").SetActive(false);
 
-				GameObject.Find ("TZOM").GetComponent<BoxCollider> ().enabled = false;
-				GameObject.Find ("TZOM").GetComponent<Renderer> ().enabled = false;
-				GameObject.Find ("").GetComponent<Renderer> ().enabled = false;
+                //Setup
+                BoxCollider[] myArray = GameObject.Find("TZOMLVL9").GetComponentsInChildren<BoxCollider>();
+                for (int i = 0; i < myArray.Length; i++)
+                {
+                    myArray[i].enabled = true;
+                }
 
 
-			}
+            }
 
 		}
 		//End Objective Progresses
