@@ -82,46 +82,73 @@ public class GameEngine : MonoBehaviour {
 			//Objective 2 See Old Man
 			if (gameObjectiveEngine.objectiveFullList [3] == gameObjectiveEngine.currentObjective) {
 				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (14).narrativeObject.keyValue);
+                //Cleanup unnecessary triggerzones
+                GameObject.Find ("TZOM11").GetComponent<BoxCollider> ().enabled = false;
 
-				GameObject.Find ("TZOM11").GetComponent<BoxCollider> ().enabled = false;
-				GameObject.Find ("TZOM13").GetComponent<BoxCollider> ().enabled = true;
+                //Setup Level
+                GameObject.Find ("TZOM13").GetComponent<BoxCollider> ().enabled = true;
 
 			}
 			//Objective 3 Get ScrapBook
 			if (gameObjectiveEngine.objectiveFullList [4] == gameObjectiveEngine.currentObjective) {
-				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (12).narrativeObject.keyValue);
-				GameObject.Find ("TZOM13").GetComponent<BoxCollider> ().enabled = false;
-				GameObject.Find ("TZOM14").GetComponent<Renderer> ().enabled = true;
-				GameObject.Find ("TZOM14").GetComponent<BoxCollider> ().enabled = true;
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (15).narrativeObject.keyValue);
+                //Setup Level
+
+                    //Enable all triggers in TZOMLVL4
+                    BoxCollider[] myArray = GameObject.Find("TZOMLVL4").GetComponentsInChildren<BoxCollider>();
+                    for (int i = 0; i < myArray.Length; i++) {
+                        myArray[i].enabled = true;
+                    }
+                    
+                    GameObject.Find ("TZOM14").GetComponent<BoxCollider> ().enabled = true;
 
 			}
 			//Objective 4 Feel the scrap book
 			if (gameObjectiveEngine.objectiveFullList [5] == gameObjectiveEngine.currentObjective) {
-				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (13).narrativeObject.keyValue);
-				GameObject.Find ("TZOM14").GetComponent<Renderer> ().enabled = false;
-				GameObject.Find ("NOScrapBook").GetComponent<Renderer> ().enabled = false;
-				GameObject.Find ("TZOM15").GetComponent<BoxCollider> ().enabled = true;
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (20).narrativeObject.keyValue);
+                //Cleanup unnecessary triggerzones
+                GameObject.Find("TZOM13").GetComponent<BoxCollider>().enabled = false;
+                GameObject.Find ("TZOM14").GetComponent<Renderer> ().enabled = false;
+				GameObject.Find ("TZOMScrapBook").GetComponent<Renderer> ().enabled = false;
+                
+                //Setup Level
+                GameObject.Find ("TZOM15").GetComponent<BoxCollider> ().enabled = true;
 
 			}
 			//Objective 5 Give it to Old Man
 			if (gameObjectiveEngine.objectiveFullList [6] == gameObjectiveEngine.currentObjective) {
-				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (14).narrativeObject.keyValue);
-				
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (21).narrativeObject.keyValue);
+				//Cleanup unnecessary triggerzones
 				GameObject.Find ("TZOM14").GetComponent<BoxCollider> ().enabled = false;
 				GameObject.Find ("TZOM14").GetComponent<Renderer> ().enabled = false;
-				GameObject.Find ("NOScrapBook").GetComponent<Renderer> ().enabled = false;
+                GameObject.Find("TZOMLVL4").SetActive(false);
+                
+
+                //Setup Level
+                
 
 
 			}
+            //Walk Around
 			if (gameObjectiveEngine.objectiveFullList [7] == gameObjectiveEngine.currentObjective) {
-				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey ().narrativeObject.keyValue);
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (26).narrativeObject.keyValue);
+                //Cleanup unnecessary triggerzones
+                GameObject.Find("TZOM14").GetComponent<EnvironmentTextAfterTime>().enabled = false;
+                
+                GameObject.Find("TZOMScrapBook").SetActive(false);
+                GameObject.Find("TZOM15").SetActive(false);
 
-				GameObject.Find ("TZOM").GetComponent<BoxCollider> ().enabled = false;
-				GameObject.Find ("TZOM").GetComponent<Renderer> ().enabled = false;
-				GameObject.Find ("").GetComponent<Renderer> ().enabled = false;
+
+                //SetupLevel
+                BoxCollider[] myArray = GameObject.Find("TZOMLVL8").GetComponentsInChildren<BoxCollider>();
+                for (int i = 0; i < myArray.Length; i++)
+                {
+                    myArray[i].enabled = true;
+                }
 
 
-			}
+
+            }
 			if (gameObjectiveEngine.objectiveFullList [8] == gameObjectiveEngine.currentObjective) {
 				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey ().narrativeObject.keyValue);
 

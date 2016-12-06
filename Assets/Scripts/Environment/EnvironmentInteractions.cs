@@ -4,7 +4,8 @@ using System.Collections;
 public class EnvironmentInteractions : MonoBehaviour {
 
 	public GameObject objectToInteractWith;
-	//public bool valueToSet;
+    //public bool valueToSet;
+    public bool deactivateOnUse;
 	public GameObject[] mastersList;
 	public GameObject masterToUse;
 	public GameObject uiMaster;
@@ -54,6 +55,9 @@ public class EnvironmentInteractions : MonoBehaviour {
 				}
 			}
 		}
+        if (deactivateOnUse == true) {
+            this.enabled = false;
+        }
 	}
 	void OnTriggerExit(Collider other){
 		if (onTriggerExit == true) {
@@ -77,7 +81,11 @@ public class EnvironmentInteractions : MonoBehaviour {
 				}
 			}
 		}
-	}
+        if (deactivateOnUse == true)
+        {
+            this.enabled = false;
+        }
+    }
 	void OnTriggerStay(Collider other){
 		if (onTriggerStay == true) {
 			if (other.gameObject == objectToInteractWith) {
@@ -100,7 +108,11 @@ public class EnvironmentInteractions : MonoBehaviour {
 				}
 			}
 		}
-	}
+        if (deactivateOnUse == true)
+        {
+            this.enabled = false;
+        }
+    }
 
 	public void SetObjective()
 	{
