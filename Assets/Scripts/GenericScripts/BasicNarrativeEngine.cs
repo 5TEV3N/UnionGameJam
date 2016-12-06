@@ -52,14 +52,14 @@ public class BasicNarrativeEngine{
         }
         if (narrativeLayer == -1)
         {
-            Debug.Log("Default state selected, polling all layers.");
+           // Debug.Log("Default state selected, polling all layers.");
             foreach (NarrativeObject myText in listToCheck)
             {
                 if (myText.narrativeObject.narrativeWeight < highestWeight)
                 {
                     winningText = myText;
                     highestWeight = myText.narrativeObject.narrativeWeight;
-                    Debug.Log("New best heaviest text: " + myText + " with a weight of " + highestWeight);
+                   // Debug.Log("New best heaviest text: " + myText + " with a weight of " + highestWeight);
                 }
             }
         }
@@ -71,13 +71,13 @@ public class BasicNarrativeEngine{
 				//Debug.Log (" I am doing the loop WHEEE Key " + myText);
 				//Debug.Log (myText.narrativeObject.narrativeLayer + " vs " + narrativeLayer);
                 if (myText.narrativeObject.narrativeLayer == narrativeLayer)
-				{ Debug.Log (" I am looking at all of the heavy objects at layer " + narrativeLayer);
-					Debug.Log (myText.narrativeObject.narrativeWeight + " and " + highestWeight);
+				{ //Debug.Log (" I am looking at all of the heavy objects at layer " + narrativeLayer);
+					//Debug.Log (myText.narrativeObject.narrativeWeight + " and " + highestWeight);
                     if (myText.narrativeObject.narrativeWeight > highestWeight)
                     {
                         winningText = myText;
                         highestWeight = myText.narrativeObject.narrativeWeight;
-                        Debug.Log("New best heaviest text: " + myText + " with a weight of " + highestWeight);
+                        //Debug.Log("New best heaviest text: " + myText + " with a weight of " + highestWeight);
                     }
 
                 }
@@ -90,7 +90,7 @@ public class BasicNarrativeEngine{
     {
         foreach (NarrativeObject myText in narrativeFullList)
         {
-            Debug.Log("I am forEaching in the GetNarrativeKeybyname function");
+           // Debug.Log("I am forEaching in the GetNarrativeKeybyname function");
             if (myText.narrativeObject.keyName == keyName)
             {
                 return myText;
@@ -107,7 +107,7 @@ public class BasicNarrativeEngine{
     {
         foreach (NarrativeObject myText in narrativeFullList)
         {
-            Debug.Log(myText.narrativeObject.keyName);
+           // Debug.Log(myText.narrativeObject.keyName);
         }
 
     }
