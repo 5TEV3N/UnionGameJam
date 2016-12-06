@@ -67,20 +67,21 @@ public class GameEngine : MonoBehaviour {
 
 
 		//Start Objective Progresses
-			//Objective 1 Enter house
+			
 		if (objectiveSwitchChecker != gameObjectiveEngine.currentObjective){
 			switchNarrative = true;
 		}
 		if (switchNarrative == true) {
 			NarrativeSwitchOff ();
-			if (gameObjectiveEngine.objectiveFullList [2] == gameObjectiveEngine.currentObjective) {
-				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (10).narrativeObject.keyValue);
+            //Objective 1 Enter house
+            if (gameObjectiveEngine.objectiveFullList [2] == gameObjectiveEngine.currentObjective) {
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (13).narrativeObject.keyValue);
 
 
 			}
 			//Objective 2 See Old Man
 			if (gameObjectiveEngine.objectiveFullList [3] == gameObjectiveEngine.currentObjective) {
-				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (11).narrativeObject.keyValue);
+				uiEngine.DisplayNarrativeText (narrativeEngine.narrativeManager.GetHeaviestNarrativeKey (14).narrativeObject.keyValue);
 
 				GameObject.Find ("TZOM11").GetComponent<BoxCollider> ().enabled = false;
 				GameObject.Find ("TZOM13").GetComponent<BoxCollider> ().enabled = true;
