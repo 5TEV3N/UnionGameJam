@@ -9015,9 +9015,36 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 188836461}
-  - {fileID: 902789532}
   m_Father: {fileID: 300826693}
   m_RootOrder: 3
+--- !u!1 &359410795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 359410796}
+  m_Layer: 0
+  m_Name: TZOMFlowers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &359410796
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 359410795}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 752687848}
+  m_RootOrder: 1
 --- !u!1001 &363829224
 Prefab:
   m_ObjectHideFlags: 0
@@ -9112,6 +9139,11 @@ Prefab:
       propertyPath: uiTextBoxToUse
       value: 
       objectReference: {fileID: 432005750}
+    - target: {fileID: 114000010336770018, guid: 847c68633e301f3418cdb6e6522fb510,
+        type: 2}
+      propertyPath: switchNarrative
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 847c68633e301f3418cdb6e6522fb510, type: 2}
   m_IsPrefabParent: 0
@@ -11859,6 +11891,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!1 &541552823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 541552824}
+  m_Layer: 0
+  m_Name: TZOMLVL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &541552824
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 541552823}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1697805612}
+  - {fileID: 984157290}
+  - {fileID: 756195373}
+  m_Father: {fileID: 752687848}
+  m_RootOrder: 0
 --- !u!43 &543868810
 Mesh:
   m_ObjectHideFlags: 0
@@ -12275,6 +12338,36 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &607924627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 607924628}
+  m_Layer: 0
+  m_Name: TZOMOldMan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &607924628
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 607924627}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 639576208}
+  - {fileID: 867762576}
+  m_Father: {fileID: 752687848}
+  m_RootOrder: 3
 --- !u!114 &609174105 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000011054406052, guid: 847c68633e301f3418cdb6e6522fb510,
@@ -12685,11 +12778,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 639576207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3333334, y: -0.5555556, z: -3.3333335}
-  m_LocalScale: {x: 6.666667, y: 0.5555556, z: -18}
+  m_LocalPosition: {x: 12.403757, y: -4.27, z: 5.5697174}
+  m_LocalScale: {x: 10, y: 1, z: -27}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 778558314}
+  m_Father: {fileID: 607924628}
   m_RootOrder: 0
 --- !u!65 &639576209
 BoxCollider:
@@ -14935,7 +15028,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 984157290}
+  - {fileID: 541552824}
+  - {fileID: 359410796}
+  - {fileID: 2130472685}
+  - {fileID: 607924628}
+  - {fileID: 1627530633}
   m_Father: {fileID: 300826693}
   m_RootOrder: 1
 --- !u!1 &754374260
@@ -15318,6 +15415,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!1 &756195372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 756195373}
+  - 65: {fileID: 756195375}
+  - 114: {fileID: 756195374}
+  m_Layer: 0
+  m_Name: TZOMIntro2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &756195373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756195372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.76875687, y: -4.27, z: -2.1802826}
+  m_LocalScale: {x: 10.375039, y: 1, z: -7.0934186}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 541552824}
+  m_RootOrder: 2
+--- !u!114 &756195374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756195372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInteractWith: {fileID: 431352857}
+  mastersList: []
+  masterToUse: {fileID: 1413914992}
+  uiMaster: {fileID: 953225506}
+  stateToSet: {fileID: 0}
+  objectiveToSet: {fileID: 0}
+  narrativeLayer: 10
+  narrativeKey: 
+  commandToUse: SetNarrativeKey
+  onTriggerEnter: 1
+  onTriggerExit: 0
+  onTriggerStay: 0
+  t4Layerf4Key: 1
+--- !u!65 &756195375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756195372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &757255125
 GameObject:
   m_ObjectHideFlags: 0
@@ -15903,9 +16066,7 @@ Transform:
   m_LocalPosition: {x: 19, y: -1, z: 19}
   m_LocalScale: {x: 1.5, y: 1.8, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 639576208}
-  - {fileID: 867762576}
+  m_Children: []
   m_Father: {fileID: 300826693}
   m_RootOrder: 2
 --- !u!43 &783221086
@@ -17665,11 +17826,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 867762575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3333334, y: -0.5555556, z: -3.3333335}
-  m_LocalScale: {x: 6.666667, y: 0.5555556, z: -18}
+  m_LocalPosition: {x: 12.403757, y: -4.27, z: 5.5697174}
+  m_LocalScale: {x: 10, y: 1, z: -27}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 778558314}
+  m_Father: {fileID: 607924628}
   m_RootOrder: 1
 --- !u!114 &867762577
 MonoBehaviour:
@@ -18338,12 +18499,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 902789531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.53}
-  m_LocalScale: {x: 3.303865, y: 1, z: 4.1874905}
+  m_LocalPosition: {x: -0.5962429, y: 4.73, z: 1.509718}
+  m_LocalScale: {x: 6.60773, y: 2, z: 8.374981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 332058402}
-  m_RootOrder: 1
+  m_Father: {fileID: 1627530633}
+  m_RootOrder: 0
 --- !u!114 &902789533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20040,8 +20201,8 @@ Transform:
   m_LocalScale: {x: 10.375039, y: 1, z: -7.0934186}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 752687848}
-  m_RootOrder: 0
+  m_Father: {fileID: 541552824}
+  m_RootOrder: 1
 --- !u!114 &984157291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23699,7 +23860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1344823682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25036,6 +25197,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011296300728, guid: 847c68633e301f3418cdb6e6522fb510,
     type: 2}
   m_PrefabInternal: {fileID: 363829224}
+--- !u!114 &1413914994 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010554664950, guid: 847c68633e301f3418cdb6e6522fb510,
+    type: 2}
+  m_PrefabInternal: {fileID: 363829224}
+  m_Script: {fileID: 11500000, guid: 2ba4df486246e4d45b4f2c2fb287ddd3, type: 3}
 --- !u!43 &1428040840
 Mesh:
   m_ObjectHideFlags: 0
@@ -27104,6 +27271,35 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1627530632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1627530633}
+  m_Layer: 0
+  m_Name: TZOMScrapBook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1627530633
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1627530632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 902789532}
+  m_Father: {fileID: 752687848}
+  m_RootOrder: 4
 --- !u!1 &1642440565
 GameObject:
   m_ObjectHideFlags: 0
@@ -27392,6 +27588,113 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &1697805611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1697805612}
+  - 65: {fileID: 1697805614}
+  - 114: {fileID: 1697805613}
+  - 114: {fileID: 1697805616}
+  - 114: {fileID: 1697805615}
+  m_Layer: 0
+  m_Name: TZOMIntro1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697805612
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697805611}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.76875687, y: -4.27, z: -2.1802826}
+  m_LocalScale: {x: 10.375039, y: 1, z: -7.0934186}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 541552824}
+  m_RootOrder: 0
+--- !u!114 &1697805613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697805611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInteractWith: {fileID: 431352857}
+  mastersList: []
+  masterToUse: {fileID: 1413914992}
+  uiMaster: {fileID: 953225506}
+  stateToSet: {fileID: 0}
+  objectiveToSet: {fileID: 0}
+  narrativeLayer: 10
+  narrativeKey: 
+  commandToUse: SetNarrativeKey
+  onTriggerEnter: 1
+  onTriggerExit: 0
+  onTriggerStay: 0
+  t4Layerf4Key: 1
+--- !u!65 &1697805614
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697805611}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1697805615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697805611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0e70b1a3533439e85e5d9e1e6e4997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrativeEngine: {fileID: 1413914994}
+  onTriggerEnter: 0
+  onTriggerExit: 0
+  onTriggerStay: 0
+--- !u!114 &1697805616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697805611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInteractWith: {fileID: 431352857}
+  mastersList: []
+  masterToUse: {fileID: 1413914992}
+  uiMaster: {fileID: 953225506}
+  stateToSet: {fileID: 0}
+  objectiveToSet: {fileID: 0}
+  narrativeLayer: 11
+  narrativeKey: 
+  commandToUse: SetNarrativeKey
+  onTriggerEnter: 0
+  onTriggerExit: 1
+  onTriggerStay: 0
+  t4Layerf4Key: 1
 --- !u!43 &1705799175
 Mesh:
   m_ObjectHideFlags: 0
@@ -32193,6 +32496,34 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1 &2130472684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2130472685}
+  m_Layer: 0
+  m_Name: TZOMMilitary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2130472685
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2130472684}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 752687848}
+  m_RootOrder: 2
 --- !u!1 &2133342256
 GameObject:
   m_ObjectHideFlags: 0

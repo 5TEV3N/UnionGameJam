@@ -10,16 +10,16 @@ public class Tooltip : MonoBehaviour {
 
     void Start()
     {
-        tooltip = GameObject.Find("Tooltip");
-        tooltip.SetActive(false);
+//        tooltip = GameObject.Find("Tooltip");
+//        tooltip.SetActive(false);
     }
 
     void Update()
     {
-        if(tooltip.activeSelf)
-        {
-            tooltip.transform.position = Input.mousePosition;
-        }
+//        if(tooltip.activeSelf)
+//        {
+//            tooltip.transform.position = Input.mousePosition;
+//        }
     }
 
 	public void Activate(Objects item)
