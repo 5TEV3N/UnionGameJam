@@ -3038,6 +3038,228 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!1001 &182821650
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 300826693}
+    m_Modifications:
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.596243
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 8.430283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013141184646, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000013141184646, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 924479417}
+    - target: {fileID: 114000013141184646, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000013141184646, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectiveToSet
+      value: 
+      objectReference: {fileID: 609174105}
+    - target: {fileID: 114000013420972358, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000013420972358, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 1413914992}
+    - target: {fileID: 114000013420972358, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000011223124390, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000011223124390, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 924479417}
+    - target: {fileID: 114000011223124390, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000011223124390, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectiveToSet
+      value: 
+      objectReference: {fileID: 81411739}
+    - target: {fileID: 114000013653249636, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000013653249636, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: mastersList.Array.data[0]
+      value: 
+      objectReference: {fileID: 924479417}
+    - target: {fileID: 114000013653249636, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: mastersList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1413914992}
+    - target: {fileID: 114000013653249636, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: mastersList.Array.data[2]
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000013653249636, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 924479417}
+    - target: {fileID: 114000013653249636, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000013653249636, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectiveToSet
+      value: 
+      objectReference: {fileID: 1254189112}
+    - target: {fileID: 114000013194752272, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000013194752272, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: mastersList.Array.data[0]
+      value: 
+      objectReference: {fileID: 924479417}
+    - target: {fileID: 114000013194752272, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: mastersList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1413914992}
+    - target: {fileID: 114000013194752272, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: mastersList.Array.data[2]
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000013194752272, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 924479417}
+    - target: {fileID: 114000013194752272, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000013194752272, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectiveToSet
+      value: 
+      objectReference: {fileID: 1144715244}
+    - target: {fileID: 114000013782119736, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000013782119736, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 924479417}
+    - target: {fileID: 114000013782119736, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000013782119736, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectiveToSet
+      value: 
+      objectReference: {fileID: 1396005130}
+    - target: {fileID: 114000012662910184, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000012662910184, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 1413914992}
+    - target: {fileID: 114000012662910184, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    - target: {fileID: 114000013469659694, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: narrativeEngine
+      value: 
+      objectReference: {fileID: 1413914994}
+    - target: {fileID: 114000010557759368, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: objectToInteractWith
+      value: 
+      objectReference: {fileID: 431352857}
+    - target: {fileID: 114000010557759368, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: masterToUse
+      value: 
+      objectReference: {fileID: 1413914992}
+    - target: {fileID: 114000010557759368, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+        type: 2}
+      propertyPath: uiMaster
+      value: 
+      objectReference: {fileID: 953225506}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3bca7a8b70c3b0a4a989adf6540c522e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &188836460
 Prefab:
   m_ObjectHideFlags: 0
@@ -9017,34 +9239,6 @@ Transform:
   - {fileID: 188836461}
   m_Father: {fileID: 300826693}
   m_RootOrder: 3
---- !u!1 &359410795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 359410796}
-  m_Layer: 0
-  m_Name: TZOMFlowers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &359410796
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 359410795}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 752687848}
-  m_RootOrder: 1
 --- !u!1001 &363829224
 Prefab:
   m_ObjectHideFlags: 0
@@ -11891,37 +12085,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!1 &541552823
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 541552824}
-  m_Layer: 0
-  m_Name: TZOMLVL
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &541552824
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 541552823}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1697805612}
-  - {fileID: 984157290}
-  - {fileID: 756195373}
-  m_Father: {fileID: 752687848}
-  m_RootOrder: 0
 --- !u!43 &543868810
 Mesh:
   m_ObjectHideFlags: 0
@@ -12338,36 +12501,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &607924627
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 607924628}
-  m_Layer: 0
-  m_Name: TZOMOldMan
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &607924628
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 607924627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 639576208}
-  - {fileID: 867762576}
-  m_Father: {fileID: 752687848}
-  m_RootOrder: 3
 --- !u!114 &609174105 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000011054406052, guid: 847c68633e301f3418cdb6e6522fb510,
@@ -12754,72 +12887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!1 &639576207
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 639576208}
-  - 65: {fileID: 639576209}
-  - 114: {fileID: 639576210}
-  m_Layer: 0
-  m_Name: TZOM13
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &639576208
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 639576207}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.403757, y: -4.27, z: 5.5697174}
-  m_LocalScale: {x: 10, y: 1, z: -27}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 607924628}
-  m_RootOrder: 0
---- !u!65 &639576209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 639576207}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &639576210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 639576207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList: []
-  masterToUse: {fileID: 924479417}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 609174105}
-  narrativeLayer: 0
-  narrativeKey: 
-  commandToUse: SetObjective
-  onTriggerEnter: 1
-  onTriggerExit: 0
-  onTriggerStay: 0
-  t4Layerf4Key: 0
 --- !u!1 &685340695
 GameObject:
   m_ObjectHideFlags: 0
@@ -15002,39 +15069,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!1 &752687847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 752687848}
-  m_Layer: 0
-  m_Name: TriggerZones
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &752687848
+--- !u!4 &752687848 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 752687847}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.596243, y: 2.27, z: 8.430283}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 541552824}
-  - {fileID: 359410796}
-  - {fileID: 2130472685}
-  - {fileID: 607924628}
-  - {fileID: 1627530633}
-  m_Father: {fileID: 300826693}
-  m_RootOrder: 1
+  m_PrefabParentObject: {fileID: 4000011923450838, guid: 3bca7a8b70c3b0a4a989adf6540c522e,
+    type: 2}
+  m_PrefabInternal: {fileID: 182821650}
 --- !u!1 &754374260
 GameObject:
   m_ObjectHideFlags: 0
@@ -15415,72 +15454,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!1 &756195372
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 756195373}
-  - 65: {fileID: 756195375}
-  - 114: {fileID: 756195374}
-  m_Layer: 0
-  m_Name: TZOMIntro2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &756195373
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 756195372}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.76875687, y: -4.27, z: -2.1802826}
-  m_LocalScale: {x: 10.375039, y: 1, z: -7.0934186}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 541552824}
-  m_RootOrder: 2
---- !u!114 &756195374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 756195372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList: []
-  masterToUse: {fileID: 1413914992}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 0}
-  narrativeLayer: 10
-  narrativeKey: 
-  commandToUse: SetNarrativeKey
-  onTriggerEnter: 1
-  onTriggerExit: 0
-  onTriggerStay: 0
-  t4Layerf4Key: 1
---- !u!65 &756195375
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 756195372}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &757255125
 GameObject:
   m_ObjectHideFlags: 0
@@ -17802,72 +17775,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 866859905}
---- !u!1 &867762575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 867762576}
-  - 65: {fileID: 867762578}
-  - 114: {fileID: 867762577}
-  m_Layer: 0
-  m_Name: TZOM15
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &867762576
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 867762575}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.403757, y: -4.27, z: 5.5697174}
-  m_LocalScale: {x: 10, y: 1, z: -27}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 607924628}
-  m_RootOrder: 1
---- !u!114 &867762577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 867762575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList: []
-  masterToUse: {fileID: 924479417}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 81411739}
-  narrativeLayer: 0
-  narrativeKey: 
-  commandToUse: SetObjective
-  onTriggerEnter: 1
-  onTriggerExit: 0
-  onTriggerStay: 0
-  t4Layerf4Key: 0
---- !u!65 &867762578
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 867762575}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &870473815
 GameObject:
   m_ObjectHideFlags: 0
@@ -18472,141 +18379,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!1 &902789531
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 902789532}
-  - 33: {fileID: 902789536}
-  - 65: {fileID: 902789535}
-  - 23: {fileID: 902789534}
-  - 114: {fileID: 902789533}
-  - 114: {fileID: 902789537}
-  m_Layer: 0
-  m_Name: TZOM14
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &902789532
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902789531}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5962429, y: 4.73, z: 1.509718}
-  m_LocalScale: {x: 6.60773, y: 2, z: 8.374981}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1627530633}
-  m_RootOrder: 0
---- !u!114 &902789533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902789531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList:
-  - {fileID: 924479417}
-  - {fileID: 1413914992}
-  - {fileID: 953225506}
-  masterToUse: {fileID: 924479417}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 1254189112}
-  narrativeLayer: 13
-  narrativeKey: 
-  commandToUse: SetObjective
-  onTriggerEnter: 1
-  onTriggerExit: 0
-  onTriggerStay: 0
-  t4Layerf4Key: 0
---- !u!23 &902789534
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902789531}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: da1aef0e7a89f46ec9508c63a32838a5, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &902789535
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902789531}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &902789536
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902789531}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &902789537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902789531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList:
-  - {fileID: 924479417}
-  - {fileID: 1413914992}
-  - {fileID: 953225506}
-  masterToUse: {fileID: 924479417}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 1144715244}
-  narrativeLayer: 14
-  narrativeKey: 
-  commandToUse: SetObjective
-  onTriggerEnter: 0
-  onTriggerExit: 1
-  onTriggerStay: 0
-  t4Layerf4Key: 0
 --- !u!1 &924479417 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011049806706, guid: 847c68633e301f3418cdb6e6522fb510,
@@ -20173,72 +19945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!1 &984157289
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 984157290}
-  - 65: {fileID: 984157292}
-  - 114: {fileID: 984157291}
-  m_Layer: 0
-  m_Name: TZOM11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &984157290
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 984157289}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.76875687, y: -4.27, z: -2.1802826}
-  m_LocalScale: {x: 10.375039, y: 1, z: -7.0934186}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 541552824}
-  m_RootOrder: 1
---- !u!114 &984157291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 984157289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList: []
-  masterToUse: {fileID: 924479417}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 1396005130}
-  narrativeLayer: 0
-  narrativeKey: 
-  commandToUse: SetObjective
-  onTriggerEnter: 1
-  onTriggerExit: 0
-  onTriggerStay: 0
-  t4Layerf4Key: 0
---- !u!65 &984157292
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 984157289}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &992361296
 GameObject:
   m_ObjectHideFlags: 0
@@ -27271,35 +26977,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &1627530632
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1627530633}
-  m_Layer: 0
-  m_Name: TZOMScrapBook
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1627530633
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1627530632}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 902789532}
-  m_Father: {fileID: 752687848}
-  m_RootOrder: 4
 --- !u!1 &1642440565
 GameObject:
   m_ObjectHideFlags: 0
@@ -27588,113 +27265,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &1697805611
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1697805612}
-  - 65: {fileID: 1697805614}
-  - 114: {fileID: 1697805613}
-  - 114: {fileID: 1697805616}
-  - 114: {fileID: 1697805615}
-  m_Layer: 0
-  m_Name: TZOMIntro1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1697805612
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697805611}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.76875687, y: -4.27, z: -2.1802826}
-  m_LocalScale: {x: 10.375039, y: 1, z: -7.0934186}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 541552824}
-  m_RootOrder: 0
---- !u!114 &1697805613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697805611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList: []
-  masterToUse: {fileID: 1413914992}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 0}
-  narrativeLayer: 10
-  narrativeKey: 
-  commandToUse: SetNarrativeKey
-  onTriggerEnter: 1
-  onTriggerExit: 0
-  onTriggerStay: 0
-  t4Layerf4Key: 1
---- !u!65 &1697805614
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697805611}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1697805615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697805611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c0e70b1a3533439e85e5d9e1e6e4997, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  narrativeEngine: {fileID: 1413914994}
-  onTriggerEnter: 0
-  onTriggerExit: 0
-  onTriggerStay: 0
---- !u!114 &1697805616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697805611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ccca78e84b648cbad9e00964864699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToInteractWith: {fileID: 431352857}
-  mastersList: []
-  masterToUse: {fileID: 1413914992}
-  uiMaster: {fileID: 953225506}
-  stateToSet: {fileID: 0}
-  objectiveToSet: {fileID: 0}
-  narrativeLayer: 11
-  narrativeKey: 
-  commandToUse: SetNarrativeKey
-  onTriggerEnter: 0
-  onTriggerExit: 1
-  onTriggerStay: 0
-  t4Layerf4Key: 1
 --- !u!43 &1705799175
 Mesh:
   m_ObjectHideFlags: 0
@@ -32496,34 +32066,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &2130472684
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2130472685}
-  m_Layer: 0
-  m_Name: TZOMMilitary
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2130472685
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2130472684}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 752687848}
-  m_RootOrder: 2
 --- !u!1 &2133342256
 GameObject:
   m_ObjectHideFlags: 0
