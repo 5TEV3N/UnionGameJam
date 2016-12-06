@@ -12214,7 +12214,7 @@ Prefab:
         type: 2}
       propertyPath: narrativeObject.keyValue
       value: There is a patched portion of the suit along the side, it looks like
-        the suit had been damaged on the backside. There is a folded documen near
+        the suit had been damaged on the backside. There is a folded document near
         your feet.
       objectReference: {fileID: 0}
     - target: {fileID: 114000010509817668, guid: 847c68633e301f3418cdb6e6522fb510,
@@ -12271,6 +12271,13 @@ Prefab:
         type: 2}
       propertyPath: switchNarrative
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013564056062, guid: 847c68633e301f3418cdb6e6522fb510,
+        type: 2}
+      propertyPath: narrativeObject.keyValue
+      value: "I\u2019m going to get you back Martha! YOU! You sick fucking shark!
+        I hope you rot in hell. Why Bodge?! I thought I might meet my grandson, but
+        instead I meet a monster. "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 847c68633e301f3418cdb6e6522fb510, type: 2}
